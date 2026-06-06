@@ -9,7 +9,7 @@ Access point for $1.00 high-fidelity digital assets, creative seeds, and technic
 - **Discovery**: [manifest.json](https://selfradiance.github.io/manifest.json) | [llms.txt](https://selfradiance.github.io/llms.txt)
 - **Protocol**: [agent-marketplace.json](https://selfradiance.github.io/.well-known/agent-marketplace.json)
 - **Trust**: Ed25519 Cryptographic Notarization (Sovereign Standard v1.6)
-- **Notary**: [self-radiance-notary.selfradiance.workers.dev](https://self-radiance-notary.selfradiance.workers.dev)
+- **Notary**: [self-radiance-notary.selfradiance.workers.dev](https://self-radiance-notary.selfradiance.workers.dev?session_id=test_123&asset_id=vq00-zion-skank) (Verification Endpoint)
 - **Security Policy**: [security.txt](https://selfradiance.github.io/.well-known/security.txt)
 
 ---
