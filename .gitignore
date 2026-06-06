@@ -1,0 +1,6 @@
+# Protect the Secret Sauce
+notary_worker.js
+*.py
+.DS_Store
+*.sh
+private_key.txt

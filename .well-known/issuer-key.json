@@ -1,0 +1,8 @@
+{
+  "@context": "https://w3id.org/security/v2",
+  "@type": "Key",
+  "@id": "did:web:selfradiance.github.io#owner",
+  "owner": "did:web:selfradiance.github.io",
+  "publicKeyBase64": "LLU9AQt4chCkV6/TBAUxeUSc4nbkN5pBKrZ9V7MYedQ=",
+  "type": "Ed25519VerificationKey2018"
+}

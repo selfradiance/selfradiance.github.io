@@ -1,0 +1,22 @@
+# Self-Radiance Agentic Marketplace
+
+> Infrastructural assets for the Agentic Era. $1.00 micro-transactions for high-intent digital credentials.
+
+## Summary
+Self-Radiance provides machine-readable licenses, compliance tokens (RESTArules), and creative fusions (Zion Skank) optimized for autonomous agent discovery and purchase.
+
+## Machine Discovery
+- Canonical Catalog: https://selfradiance.github.io/manifest.json
+- Agent Assets API (Well-Known): https://selfradiance.github.io/.well-known/agent-assets.json
+- Issuer Identity: https://selfradiance.github.io/.well-known/issuer.json
+- Public Key: https://selfradiance.github.io/.well-known/issuer-key.json
+- Notary Endpoint: https://self-radiance-notary.selfradiance.workers.dev
+
+## Assets
+- Zion Skank Commercial License: /manifest.json#vq00-zion-skank-license
+- RESTArules Compliance Token: /manifest.json#vq01-restarules-compliance
+
+## Protocol
+1. Discovery: GET /manifest.json
+2. Authorization: Present Stripe 'purchaseUrl' to human for Heart/Will authority.
+3. Verification: Fetch signed receipt from /receipts/ after purchase completion.

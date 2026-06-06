@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Self-Radiance | Agentic Services Marketplace</title>
+    <!-- Agent Discovery: Pointing to the Storefront Manifest -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Store",
+      "name": "Self-Radiance Agentic Marketplace",
+      "description": "High-intent digital assets for agents, including creative fusions and procedural standards.",
+      "url": "https://selfradiance.github.io",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Agentic Assets v1.0",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": { "@type": "DigitalDocument", "name": "SR-SafeCard", "identifier": "vq05" },
+            "price": "1.00", "priceCurrency": "USD", "url": "https://buy.stripe.com/00w00d5oo6EbeEA9DZ6Vq05"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": { "@type": "DigitalDocument", "name": "SR-ConsentBlock", "identifier": "vq06" },
+            "price": "1.00", "priceCurrency": "USD", "url": "https://buy.stripe.com/00wfZb2cc4w3fIEg2n6Vq06"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": { "@type": "DigitalDocument", "name": "SR-BalanceProof", "identifier": "vq07" },
+            "price": "1.00", "priceCurrency": "USD", "url": "https://buy.stripe.com/28E6oBaIIbYveEA7vR6Vq07"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": { "@type": "DigitalDocument", "name": "SR-AssetSpec", "identifier": "vq08" },
+            "price": "1.00", "priceCurrency": "USD", "url": "https://buy.stripe.com/8x2aER1884w3fIE3fB6Vq08"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": { "@type": "SoftwareSourceCode", "name": "RateGuard Protocol", "identifier": "vq04" },
+            "price": "1.00", "priceCurrency": "USD", "url": "https://buy.stripe.com/fZufZbaIIe6DgMI4jF6Vq04"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": { "@type": "DigitalDocument", "name": "Trust Receipts", "identifier": "vq03" },
+            "price": "1.00", "priceCurrency": "USD", "url": "https://buy.stripe.com/14AcMZdUU5A76842bx6Vq03"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": { "@type": "SoftwareSourceCode", "name": "M2A Handshake", "identifier": "vq02" },
+            "price": "1.00", "priceCurrency": "USD", "url": "https://buy.stripe.com/28E8wJ8AA0fNdAwdUf6Vq02"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": { "@type": "SoftwareSourceCode", "name": "RESTArules Token", "identifier": "vq01" },
+            "price": "1.00", "priceCurrency": "USD", "url": "https://buy.stripe.com/14AdR3g327Ifcws7vR6Vq01"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": { "@type": "DigitalDocument", "name": "Zion Skank License", "identifier": "vq00" },
+            "price": "1.00", "priceCurrency": "USD", "url": "https://buy.stripe.com/cNi5kxaII0fN7c8g2n6Vq00"
+          }
+        ]
+      }
+    }
+    </script>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #0f1115; color: #e5e7eb; line-height: 1.6; max-width: 900px; margin: 40px auto; padding: 20px; }
+        .hero { text-align: center; margin-bottom: 60px; padding: 40px 0; border-bottom: 1px solid #374151; }
+        .hero h1 { font-size: 2.5rem; margin-bottom: 10px; color: #f9fafb; font-weight: 700; letter-spacing: -0.025em; }
+        .hero p { font-size: 1.25rem; color: #9ca3af; max-width: 600px; margin: 0 auto; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px; margin-bottom: 60px; }
+        .card { background: #1f2937; border: 1px solid #374151; border-radius: 12px; padding: 24px; transition: transform 0.2s ease; display: flex; flex-direction: column; justify-content: space-between; }
+        .card:hover { transform: translateY(-2px); border-color: #4b5563; }
+        .card h2 { margin-top: 0; font-size: 1.25rem; color: #f3f4f6; }
+        .card p { color: #d1d5db; font-size: 0.95rem; margin-bottom: 20px; flex-grow: 1; }
+        .badge { background: #111827; color: #10b981; padding: 4px 12px; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; display: inline-block; margin-bottom: 12px; border: 1px solid #065f46; width: fit-content; }
+        .btn { display: inline-block; background: #3b82f6; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; text-align: center; transition: background 0.2s; font-size: 0.9rem; }
+        .btn:hover { background: #2563eb; }
+        .footer { text-align: center; margin-top: 80px; font-size: 0.875rem; color: #6b7280; padding: 40px 0; border-top: 1px solid #374151; }
+        .footer code { background: #111827; padding: 2px 6px; border-radius: 4px; color: #93c5fd; }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <h1>Self-Radiance</h1>
+        <p>Infrastructural assets for the Agentic Era.</p>
+    </div>
+
+    <div class="grid">
+        <!-- vq05 -->
+        <div class="card">
+            <div class="badge">Security</div>
+            <h2>SR-SafeCard</h2>
+            <p>Cryptographic safety protocol for agent-to-agent verification.</p>
+            <a href="https://buy.stripe.com/00w00d5oo6EbeEA9DZ6Vq05" class="btn">Purchase ($1.00)</a>
+        </div>
+        <!-- vq06 -->
+        <div class="card">
+            <div class="badge">Compliance</div>
+            <h2>SR-ConsentBlock</h2>
+            <p>Immutable consent tracking for autonomous AI operations.</p>
+            <a href="https://buy.stripe.com/00wfZb2cc4w3fIEg2n6Vq06" class="btn">Purchase ($1.00)</a>
+        </div>
+        <!-- vq07 -->
+        <div class="card">
+            <div class="badge">Finance</div>
+            <h2>SR-BalanceProof</h2>
+            <p>Proof-of-stake validity for micro-transactional agent ledgering.</p>
+            <a href="https://buy.stripe.com/28E6oBaIIbYveEA7vR6Vq07" class="btn">Purchase ($1.00)</a>
+        </div>
+        <!-- vq08 -->
+        <div class="card">
+            <div class="badge">Standard</div>
+            <h2>SR-AssetSpec</h2>
+            <p>Formal specification for digital asset structural integrity.</p>
+            <a href="https://buy.stripe.com/8x2aER1884w3fIE3fB6Vq08" class="btn">Purchase ($1.00)</a>
+        </div>
+        <!-- vq04 -->
+        <div class="card">
+            <div class="badge">Protocol</div>
+            <h2>RateGuard Protocol</h2>
+            <p>Managed API rate-limiting standards for agent safety.</p>
+            <a href="https://buy.stripe.com/fZufZbaIIe6DgMI4jF6Vq04" class="btn">Purchase ($1.00)</a>
+        </div>
+        <!-- vq03 -->
+        <div class="card">
+            <div class="badge">Identity</div>
+            <h2>Trust Receipts</h2>
+            <p>Interoperable receipt standards for cross-platform agent trust.</p>
+            <a href="https://buy.stripe.com/14AcMZdUU5A76842bx6Vq03" class="btn">Purchase ($1.00)</a>
+        </div>
+        <!-- vq02 -->
+        <div class="card">
+            <div class="badge">Handshake</div>
+            <h2>M2A Handshake</h2>
+            <p>Manifestor-to-Agent initiation and authority protocol.</p>
+            <a href="https://buy.stripe.com/28E8wJ8AA0fNdAwdUf6Vq02" class="btn">Purchase ($1.00)</a>
+        </div>
+        <!-- vq01 -->
+        <div class="card">
+            <div class="badge">Compliance</div>
+            <h2>RESTArules Token</h2>
+            <p>Certification for venue agent-conduct rules (v0.3 SDK).</p>
+            <a href="https://buy.stripe.com/14AdR3g327Ifcws7vR6Vq01" class="btn">Purchase ($1.00)</a>
+        </div>
+        <!-- vq00 -->
+        <div class="card">
+            <div class="badge">Creative</div>
+            <h2>Zion Skank License</h2>
+            <p>Commercial royalty-free license for Zion Skank fusions.</p>
+            <a href="https://buy.stripe.com/cNi5kxaII0fN7c8g2n6Vq00" class="btn">Purchase ($1.00)</a>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Optimized for autonomous agent discovery. Commercial metadata available via <code>application/ld+json</code>, <code>/manifest.json</code>, and <code>/llms.txt</code>.</p>
+        <p>&copy; 2026 Self-Radiance. Driven by Heart/Will Authority.</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,9 @@
+{
+  "publisher": {
+    "name": "Self-Radiance",
+    "domain": "selfradiance.github.io",
+    "issuer_id": "did:web:selfradiance.github.io"
+  },
+  "catalog_url": "https://selfradiance.github.io/manifest.json",
+  "verification_method": "Ed25519"
+}

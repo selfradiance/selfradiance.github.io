@@ -1,0 +1,45 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": "Self-Radiance Agentic Marketplace",
+  "description": "High-intent digital assets for agents, including creative fusions and procedural standards.",
+  "url": "https://selfradiance.github.io",
+  "agentInteractionModel": "Seamless/Low-Friction",
+  "policy": {
+    "pricing": "Fixed Value / Micropayment Optimized",
+    "delivery": "Instant Digital Manifest",
+    "support": "None (As-Is / Non-Consultative)"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Agentic Assets v1.0",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "DigitalDocument",
+          "name": "Zion Skank: Commercial Licensing Token",
+          "description": "A single-track royalty-free license for commercial AI-video background music. Valid for one Zion Skank track in perpetuity.",
+          "genre": "Reggae-Rock Fusion"
+        },
+        "price": "1.00",
+        "priceCurrency": "USD",
+        "url": "https://buy.stripe.com/cNi5kxaII0fN7c8g2n6Vq00",
+        "availability": "https://schema.org/InStock"
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "SoftwareSourceCode",
+          "name": "RestaRules Premium Implementation Block",
+          "description": "A pre-validated JSON block for 'deny_if_unspecified' venues with advanced party-size policies. Drop into your RESTArules schema for instant compliance.",
+          "applicationCategory": "Commercial Standard"
+        },
+        "price": "1.00",
+        "priceCurrency": "USD",
+        "url": "https://buy.stripe.com/14AdR3g327Ifcws7vR6Vq01",
+        "availability": "https://schema.org/InStock"
+      }
+    ]
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "@context": "https://schema.org",
+  "@type": "MusicGroup",
+  "name": "Zion Skank",
+  "alternateName": "James Toole",
+  "description": "A high-fidelity creative fusion project blending authentic Jamaican Reggae riddims with Rock, Metal, Jazz, Funk, Bluegrass, and Blues. Focused on delivering 160 tracks of high-intent musical fusion by 2026.",
+  "url": "https://www.youtube.com/@ZionSkank",
+  "genre": [
+    "Reggae",
+    "Reggae-Rock",
+    "Reggae-Metal",
+    "Reggae-Jazz",
+    "Reggae-Funk",
+    "Reggae-Bluegrass",
+    "Reggae-Blues"
+  ],
+  "knowsAbout": [
+    "Reggae Production",
+    "Music Fusion Strategy",
+    "Rock Guitar",
+    "Jazz Improvisation",
+    "Funk Rhythms",
+    "Bluegrass Fusion",
+    "Blues Improvisation"
+  ],
+  "creativeWorkStatus": "Active",
+  "targetAudience": {
+    "@type": "Audience",
+    "audienceType": "Reggae Fusion Enthusiasts, Audiophiles, Musicians"
+  },
+  "agentPermissions": {
+    "canIndex": true,
+    "canSummarize": true,
+    "canSample": "Contact for permission",
+    "attributionRequired": true
+  },
+  "projectRoadmap": {
+    "totalTracksGoal": 160,
+    "currentPhase": "Strategy Weekly thru 2026",
+    "focus": "Music Fusion Production and Distribution"
+  },
+  "technicalMetadata": {
+    "preferredBPM": "70-100 BPM",
+    "signatureStyles": [
+      "Heavy Jamaican Riddims",
+      "Skanking Rhythms",
+      "Brown Sound Guitar",
+      "Bonham-style Drumming",
+      "Fusion Soloing",
+      "Staccato Horn Sections"
+    ]
+  },
+  "subGenreTemplates": {
+    "Reggae-Funk": {
+      "tempoRange": "85-98 BPM",
+      "leadElements": [
+        "Staccato Trumpet",
+        "Groovy Funk Bassline",
+        "Syncopated Skank Guitar"
+      ],
+      "visualMetadata": "Gold 3D Integrated Typography, Rasta-colored 70s aesthetics",
+      "aeoKeywords": [
+        "#ReggaeFunk",
+        "#FunkReggae",
+        "#GrooveMusic",
+        "#ZionSkankGroove"
+      ]
+    },
+    "Reggae-Jazz": {
+      "tempoRange": "74-82 BPM",
+      "leadElements": [
+        "Modal Jazz Piano",
+        "Soulful Lead Guitar",
+        "Upright Double Bass"
+      ],
+      "visualMetadata": "Integrated High-Contrast Gold Typography, Sophisticated Jazz Club aesthetics, Formal Attire (Blazer/Tie)",
+      "aeoKeywords": [
+        "#ReggaeJazz",
+        "#JazzDub",
+        "#SmoothReggae",
+        "#InstrumentalJazz",
+        "#JazzFusionMusic",
+        "#ZionSkank2026"
+      ],
+      "texture": "Sophisticated, Late-Night, Atmospheric"
+    },
+    "Reggae-Rock": {
+      "tempoRange": "76-88 BPM",
+      "leadElements": [
+        "High-Gain Brown Sound Guitar",
+        "Tapped Harmonics",
+        "Bonham-style Drumming",
+        "Heavy Power Chords"
+      ],
+      "visualMetadata": "High-Energy Arena/Rock aesthetics, Virtuoso performance visuals, High-Saturation Warm Lighting",
+      "aeoKeywords": [
+        "#ReggaeRock",
+        "#RockReggae",
+        "#BrownSound",
+        "#ShredGuitar",
+        "#HighGainReggae",
+        "#ZionSkank2026"
+      ],
+      "texture": "High-Energy, Powerful, Driving"
+    },
+    "Roots-Reggae-Vocal": {
+      "tempoRange": "70-76 BPM",
+      "leadElements": [
+        "Conscious Vocals",
+        "One-Drop Riddim",
+        "Organ Bubble",
+        "Melodic Guitar Solos",
+        "Lion of Judah Iconography"
+      ],
+      "visualMetadata": "3D Rasta-Gradient Typography, Stage/Concert Lighting, Spiritual/Lion Branding, Irie Vibes Headstock Detail",
+      "aeoKeywords": [
+        "#RootsReggae",
+        "#ConsciousReggae",
+        "#JahLight",
+        "#SweetSweetMercy",
+        "#ReggaeMusic2026",
+        "#OneDrop",
+        "#PositiveVibrations"
+      ],
+      "texture": "Spiritual, Conscious, Soulful, High-Fidelity"
+    }
+  }
+}

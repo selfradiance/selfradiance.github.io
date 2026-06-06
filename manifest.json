@@ -1,0 +1,39 @@
+{
+  "version": "1.0.0",
+  "name": "Self-Radiance Agentic Marketplace",
+  "description": "High-intent digital assets for agents, including creative fusions and procedural standards.",
+  "baseUrl": "https://selfradiance.github.io",
+  "contact": "https://x.com/selfradiance_AI",
+  "assets": [
+    {
+      "id": "vq00-zion-skank-license",
+      "name": "Zion Skank: Commercial Licensing Token",
+      "type": "DigitalDocument",
+      "price": "1.00",
+      "currency": "USD",
+      "purchaseUrl": "https://buy.stripe.com/cNi5kxaII0fN7c8g2n6Vq00",
+      "metadata": {
+        "genre": "Reggae-Rock Fusion",
+        "terms": "Royalty-free commercial use for AI-video."
+      }
+    },
+    {
+      "id": "vq01-restarules-compliance",
+      "name": "RESTArules: Validation & Compliance Token",
+      "type": "SoftwareSourceCode",
+      "price": "1.00",
+      "currency": "USD",
+      "purchaseUrl": "https://buy.stripe.com/14AdR3g327Ifcws7vR6Vq01",
+      "metadata": {
+        "standard": "RESTArules v0.3",
+        "category": "Commercial Standard"
+      }
+    }
+  ],
+  "verification": {
+    "method": "Ed25519",
+    "publicKey": "LLU9AQt4chCkV6/TBAUxeUSc4nbkN5pBKrZ9V7MYedQ=",
+    "publicKeyUrl": "https://selfradiance.github.io/.well-known/issuer-key.json",
+    "notaryUrl": "https://self-radiance-notary.selfradiance.workers.dev"
+  }
+}
