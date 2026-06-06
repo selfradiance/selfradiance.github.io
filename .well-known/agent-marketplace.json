@@ -1,0 +1,29 @@
+{
+  "schema": "agent-marketplace-v1",
+  "name": "Self-Radiance Agentic Marketplace",
+  "origin": "https://selfradiance.github.io",
+  "catalog_url": "https://selfradiance.github.io/manifest.json",
+  "llms_txt_url": "https://selfradiance.github.io/llms.txt",
+  "notary": {
+    "url_template": "https://self-radiance-notary.selfradiance.workers.dev?session_id={CHECKOUT_SESSION_ID}&asset_id={ASSET_ID}",
+    "method": "GET",
+    "input": {
+      "session_id": "Stripe Checkout Session ID",
+      "asset_id": "Marketplace asset ID"
+    },
+    "output": {
+      "content_type": "application/json",
+      "signature_algorithm": "Ed25519"
+    }
+  },
+  "verification": {
+    "public_key_url": "https://selfradiance.github.io/.well-known/issuer-key.json",
+    "signature_algorithm": "Ed25519"
+  },
+  "payment": {
+    "processor": "stripe",
+    "human_authorization_required": true,
+    "currency": "USD",
+    "default_price": "1.00"
+  }
+}
