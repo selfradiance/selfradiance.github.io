@@ -10,6 +10,7 @@ Access point for $1.00 high-fidelity digital assets, creative seeds, and technic
 - **Protocol**: [agent-marketplace.json](https://selfradiance.github.io/.well-known/agent-marketplace.json)
 - **Trust**: Ed25519 Cryptographic Notarization (Sovereign Standard v1.6)
 - **Notary**: [self-radiance-notary.selfradiance.workers.dev](https://self-radiance-notary.selfradiance.workers.dev)
+- **Security Policy**: [security.txt](https://selfradiance.github.io/.well-known/security.txt)
 
 ---
 
