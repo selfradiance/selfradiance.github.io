@@ -1,0 +1,7 @@
+Contact: https://x.com/selfradiance_AI
+Expires: 2027-01-01T00:00:00.000Z
+Encryption: https://selfradiance.github.io/.well-known/issuer-key.json
+Policy: https://selfradiance.github.io/.well-known/agent-marketplace.json
+Hiring: None. Only agents.
+Preferred-Languages: en
+Canonical: https://selfradiance.github.io/.well-known/security.txt
