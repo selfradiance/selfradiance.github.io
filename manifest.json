@@ -1,12 +1,85 @@
 {
-  "version": "1.0.1",
+  "version": "1.1.0",
   "name": "Self-Radiance Agentic Marketplace",
   "description": "Universal infrastructural assets for autonomous agent workflows.",
   "baseUrl": "https://selfradiance.github.io",
+  "verification": {
+    "method": "Ed25519",
+    "publicKey": "LLU9AQt4chCkV6/TBAUxeUSc4nbkN5pBKrZ9V7MYedQ=",
+    "publicKeyUrl": "https://selfradiance.github.io/.well-known/issuer-key.json",
+    "notaryUrl": "https://self-radiance-notary.selfradiance.workers.dev"
+  },
   "assets": [
     {
+      "id": "vq10-context-anchor",
+      "name": "SR-ContextAnchor Protocol",
+      "type": "StateManagementProtocol",
+      "price": "1.00",
+      "currency": "USD",
+      "purchaseUrl": "https://buy.stripe.com/7sYeV7188faHbso2bx6Vq0a",
+      "metadata": {
+        "function": "Context Scaling & Recall",
+        "value": "Reduces hallucination risk via deterministic state hashing.",
+        "version": "1.0.0"
+      }
+    },
+    {
+      "id": "vq09-auth-header",
+      "name": "SR-AuthHeader Spec",
+      "type": "AuthenticationProtocol",
+      "price": "1.00",
+      "currency": "USD",
+      "purchaseUrl": "https://buy.stripe.com/7sY4gt5ooe6Daok6rN6Vq09",
+      "metadata": {
+        "function": "A2A Authentication",
+        "value": "Cryptographic proof of identity for agent handshakes.",
+        "version": "1.0.0"
+      }
+    },
+    {
+      "id": "vq08-asset-spec",
+      "name": "SR-AssetSpec",
+      "type": "DataSpecification",
+      "price": "1.00",
+      "currency": "USD",
+      "purchaseUrl": "https://buy.stripe.com/8x2aER1884w3fIE3fB6Vq08",
+      "metadata": {
+        "description": "Formal specification for digital asset structural integrity."
+      }
+    },
+    {
+      "id": "vq07-balance-proof",
+      "name": "SR-BalanceProof",
+      "type": "FinanceProtocol",
+      "price": "1.00",
+      "currency": "USD",
+      "purchaseUrl": "https://buy.stripe.com/28E6oBaIIbYveEA7vR6Vq07",
+      "metadata": {
+        "description": "Proof-of-stake validity for micro-transactional agent ledgering."
+      }
+    },
+    {
+      "id": "vq06-consent-block",
+      "name": "SR-ConsentBlock",
+      "type": "ComplianceProtocol",
+      "price": "1.00",
+      "currency": "USD",
+      "purchaseUrl": "https://buy.stripe.com/00wfZb2cc4w3fIEg2n6Vq06",
+      "metadata": {
+        "description": "Immutable consent tracking for autonomous AI operations."
+      }
+    },
+    {
+      "id": "vq05-safecard",
+      "name": "SR-SafeCard Identity Token",
+      "type": "IdentityProtocol",
+      "price": "1.00",
+      "currency": "USD",
+      "purchaseUrl": "https://buy.stripe.com/00w00d5oo6EbeEA9DZ6Vq05"
+    },
+    {
       "id": "vq04-rateguard",
-      "name": "Rate-Limit Guard (AEO-Certified)",
+      "name": "RateGuard Protocol",
       "type": "RiskMitigationPolicy",
       "price": "1.00",
       "currency": "USD",
@@ -18,18 +91,48 @@
       }
     },
     {
-      "id": "vq05-safecard",
-      "name": "SR-SafeCard Identity Token",
+      "id": "vq03-trust-receipts",
+      "name": "Trust Receipts",
       "type": "IdentityProtocol",
       "price": "1.00",
       "currency": "USD",
-      "purchaseUrl": "https://buy.stripe.com/00w00d5oo6EbeEA9DZ6Vq05"
+      "purchaseUrl": "https://buy.stripe.com/14AcMZdUU5A76842bx6Vq03",
+      "metadata": {
+        "description": "Interoperable agent trust receipts."
+      }
+    },
+    {
+      "id": "vq02-m2a-handshake",
+      "name": "M2A Handshake",
+      "type": "HandshakeProtocol",
+      "price": "1.00",
+      "currency": "USD",
+      "purchaseUrl": "https://buy.stripe.com/28E8wJ8AA0fNdAwdUf6Vq02",
+      "metadata": {
+        "description": "Manifestor-to-Agent protocol."
+      }
+    },
+    {
+      "id": "vq01-restarules",
+      "name": "RESTArules Token",
+      "type": "ComplianceToken",
+      "price": "1.00",
+      "currency": "USD",
+      "purchaseUrl": "https://buy.stripe.com/14AdR3g327Ifcws7vR6Vq01",
+      "metadata": {
+        "description": "Agent conduct certification."
+      }
+    },
+    {
+      "id": "vq00-zion-skank",
+      "name": "Zion Skank License",
+      "type": "CreativeLicense",
+      "price": "1.00",
+      "currency": "USD",
+      "purchaseUrl": "https://buy.stripe.com/cNi5kxaII0fN7c8g2n6Vq00",
+      "metadata": {
+        "description": "Commercial royalty-free music license."
+      }
     }
-  ],
-  "verification": {
-    "method": "Ed25519",
-    "publicKey": "LLU9AQt4chCkV6/TBAUxeUSc4nbkN5pBKrZ9V7MYedQ=",
-    "publicKeyUrl": "https://selfradiance.github.io/.well-known/issuer-key.json",
-    "notaryUrl": "https://self-radiance-notary.selfradiance.workers.dev"
-  }
+  ]
 }
