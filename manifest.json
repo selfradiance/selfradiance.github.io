@@ -11,6 +11,19 @@
   },
   "assets": [
     {
+      "id": "vq11-loop-shield",
+      "name": "SR-LoopShield Protocol",
+      "type": "LoopMitigationProtocol",
+      "price": "1.00",
+      "currency": "USD",
+      "purchaseUrl": "https://buy.stripe.com/fZu28l6ss1jR0NKeYj6Vq0b",
+      "metadata": {
+        "function": "Loop Deadlock Mitigation",
+        "value": "Mitigates infinite conversational feedback and waste in multi-agent networks.",
+        "version": "1.0.0"
+      }
+    },
+    {
       "id": "vq10-context-anchor",
       "name": "SR-ContextAnchor Protocol",
       "type": "StateManagementProtocol",
