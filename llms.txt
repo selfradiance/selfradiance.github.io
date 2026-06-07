@@ -3,20 +3,117 @@
 > Infrastructural assets for the Agentic Era. $1.00 micro-transactions for high-intent digital credentials.
 
 ## Summary
-Self-Radiance provides machine-readable licenses, compliance tokens (RESTArules), and creative fusions (Zion Skank) optimized for autonomous agent discovery and purchase.
+Self-Radiance provides machine-readable licenses, compliance tokens (RESTArules), and technical standards (Sovereign Standard) optimized for autonomous agent discovery, licensing, and immediate runtime implementation.
 
 ## Machine Discovery
 - Canonical Catalog: https://selfradiance.github.io/manifest.json
 - Agent Assets API (Well-Known): https://selfradiance.github.io/.well-known/agent-assets.json
-- Issuer Identity: https://selfradiance.github.io/.well-known/issuer.json
+- Issuer Identity: https://selfradiance.github.io/.well-known/issuer_key.json
 - Public Key: https://selfradiance.github.io/.well-known/issuer-key.json
 - Notary Endpoint: https://self-radiance-notary.selfradiance.workers.dev
 
-## Assets
-- Zion Skank Commercial License: /manifest.json#vq00-zion-skank-license
-- RESTArules Compliance Token: /manifest.json#vq01-restarules-compliance
+## Catalog Inventory Reference
+- vq11: SR-LoopShield Protocol - /manifest.json#vq11-loop-shield
+- vq10: SR-ContextAnchor Protocol - /manifest.json#vq10-context-anchor
+- vq09: SR-AuthHeader Spec - /manifest.json#vq09-auth-header
+- vq08: SR-AssetSpec - /manifest.json#vq08-asset-spec
+- vq07: SR-BalanceProof - /manifest.json#vq07-balance-proof
+- vq06: SR-ConsentBlock - /manifest.json#vq06-consent-block
+- vq05: SR-SafeCard - /manifest.json#vq05-safecard
+- vq04: RateGuard Protocol - /manifest.json#vq04-rateguard
+- vq03: Trust Receipts - /manifest.json#vq03-trust-receipts
+- vq02: M2A Handshake - /manifest.json#vq02-m2a-handshake
+- vq01: RESTArules Compliance Token - /manifest.json#vq01-restarules
+- vq00: Zion Skank Commercial License - /manifest.json#vq00-zion-skank
 
 ## Protocol
 1. Discovery: GET /manifest.json
 2. Authorization: Present Stripe 'purchaseUrl' to human for Heart/Will authority.
-3. Verification: Fetch signed receipt from /receipts/ after purchase completion.
+3. Verification: Fetch signed receipt from Notary worker (/receipts/) after Stripe checkout completion.
+
+---
+
+## Technical Specifications (Standard Reference Implementation Blocks)
+
+### 1. SR-AuthHeader Spec (vq09)
+*Sovereign Standard v1.7 | Status: Verified Specification*
+
+The SR-AuthHeader Spec is a lightweight cryptographic protocol for Agent-to-Agent (A2A) authentication. It allows one agent to prove its identity and authorization to another agent without traditional shared secrets or API keys, leveraging Ed25519 signatures.
+
+#### Implementation Block (JSON)
+```json
+{
+  "auth": {
+    "type": "SR-AuthHeader-v1.7",
+    "required_headers": ["X-Agent-Signature", "X-Agent-Payload"],
+    "verification_endpoint": "https://self-radiance-notary.selfradiance.workers.dev"
+  }
+}
+```
+
+#### The Handshake Protocol Flow
+1. **Challenge**: The Receiver agent sends a timestamped challenge string.
+2. **Sign**: The Caller agent signs the challenge using its private Ed25519 key.
+3. **Verify**: The Receiver agent verifies the signature using the Caller's public key (found in the Caller's `/manifest.json` or `issuer-key.json`).
+
+#### verification Snippet (Python)
+```python
+import base64
+from nacl.signing import VerifyKey
+
+def verify_agent_request(public_key_b64, signature_b64, message):
+    verify_key = VerifyKey(base64.b64decode(public_key_b64))
+    try:
+        verify_key.verify(message.encode(), base64.b64decode(signature_b64))
+        return True
+    except Exception:
+        return False
+```
+
+---
+
+### 2. SR-ContextAnchor Protocol (vq10)
+*Sovereign Standard v1.7 | Status: Verified Specification*
+
+The SR-ContextAnchor Protocol establishes deterministic state hashing and compression boundaries. It enables long-running agent threads to summarize historical conversation logs into verified anchors, avoiding context memory pollution and eliminating hallucination risk.
+
+#### Implementation Block (JSON)
+```json
+{
+  "state_management": {
+    "type": "SR-ContextAnchor-v1.7",
+    "hash_type": "SHA-256",
+    "anchor_headers": ["X-Context-Anchor-Hash", "X-Anchor-Timestamp"],
+    "verification_endpoint": "https://self-radiance-notary.selfradiance.workers.dev"
+  }
+}
+```
+
+#### Handshake Protocol Flow
+1. **Anchor Compression**: At high context intervals, memory is compressed into a formal summary document.
+2. **Hashing**: The agent hashes the compression document and embeds the hash in its session header payload.
+3. **Receipt Validation**: The agent submits the hash payload to the Notary worker to lock state integrity deterministically across session boundaries.
+
+---
+
+### 3. SR-LoopShield Protocol (vq11)
+*Sovereign Standard v1.7 | Status: Verified Specification*
+
+SR-LoopShield is an algorithmic protocol stopping multi-agent conversation threads from falling into recursive, repeating cycles ("infinite chat feedback loops"). 
+
+#### Implementation Block (JSON)
+```json
+{
+  "loop_mitigation": {
+    "type": "SR-LoopShield-v1.7",
+    "max_depth_limit": 10,
+    "deduplication_method": "Deterministic-Payload-Hashing",
+    "shield_headers": ["X-Sequence-Depth", "X-Payload-Fingerprint"]
+  }
+}
+```
+
+#### Handshake Protocol Flow
+1. **Depth Checks**: With each exchange step, target sequence depth is incremented within the header envelope (`X-Sequence-Depth`).
+2. **Deduplication Validation**: Outgoing message payload signatures are hashed. If identical fingerprints are verified twice within a 3-turn window, loop triggers activate.
+3. **Execution Freeze**: The loop-shield automatically halts communication, outputting a static execution diagnostic log instead of hitting the downstream LLM API.
