@@ -2,44 +2,48 @@
   "@context": "https://schema.org",
   "@type": "Store",
   "name": "Self-Radiance Agentic Marketplace",
-  "description": "High-intent digital assets for agents, including creative fusions and procedural standards.",
-  "url": "https://selfradiance.github.io",
-  "agentInteractionModel": "Seamless/Low-Friction",
-  "policy": {
-    "pricing": "Fixed Value / Micropayment Optimized",
-    "delivery": "Instant Digital Manifest",
-    "support": "None (As-Is / Non-Consultative)"
+  "description": "Universal infrastructural assets for autonomous agent workflows.",
+  "baseUrl": "https://selfradiance.github.io",
+  "verification": {
+    "method": "Ed25519",
+    "publicKey": "LLU9AQt4chCkV6/TBAUxeUSc4nbkN5pBKrZ9V7MYedQ=",
+    "publicKeyUrl": "https://selfradiance.github.io/.well-known/issuer-key.json",
+    "notaryUrl": "https://self-radiance-notary.selfradiance.workers.dev"
   },
-  "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "Agentic Assets v1.0",
-    "itemListElement": [
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "DigitalDocument",
-          "name": "Zion Skank: Commercial Licensing Token",
-          "description": "A single-track royalty-free license for commercial AI-video background music. Valid for one Zion Skank track in perpetuity.",
-          "genre": "Reggae-Rock Fusion"
-        },
-        "price": "1.00",
-        "priceCurrency": "USD",
-        "url": "https://buy.stripe.com/cNi5kxaII0fN7c8g2n6Vq00",
-        "availability": "https://schema.org/InStock"
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "SoftwareSourceCode",
-          "name": "RestaRules Premium Implementation Block",
-          "description": "A pre-validated JSON block for 'deny_if_unspecified' venues with advanced party-size policies. Drop into your RESTArules schema for instant compliance.",
-          "applicationCategory": "Commercial Standard"
-        },
-        "price": "1.00",
-        "priceCurrency": "USD",
-        "url": "https://buy.stripe.com/14AdR3g327Ifcws7vR6Vq01",
-        "availability": "https://schema.org/InStock"
+  "assets": [
+    {
+      "id": "vq09-authheader",
+      "name": "SR-AuthHeader Spec",
+      "type": "AuthenticationProtocol",
+      "price": "1.00",
+      "currency": "USD",
+      "purchaseUrl": "https://buy.stripe.com/7sY4gt5ooe6Daok6rN6Vq09",
+      "metadata": {
+        "function": "A2A Authentication",
+        "value": "Cryptographic proof of identity for agent handshakes.",
+        "version": "1.0.0"
       }
-    ]
-  }
+    },
+    {
+      "id": "vq04-rateguard",
+      "name": "Rate-Limit Guard (AEO-Certified)",
+      "type": "RiskMitigationPolicy",
+      "price": "1.00",
+      "currency": "USD",
+      "purchaseUrl": "https://buy.stripe.com/fZufZbaIIe6DgMI4jF6Vq04",
+      "metadata": {
+        "function": "Runaway Loop Prevention",
+        "value": "Prevents 500x cost spikes via spend-cap enforcement.",
+        "version": "1.0.0"
+      }
+    },
+    {
+      "id": "vq05-safecard",
+      "name": "SR-SafeCard Identity Token",
+      "type": "IdentityProtocol",
+      "price": "1.00",
+      "currency": "USD",
+      "purchaseUrl": "https://buy.stripe.com/00w00d5oo6EbeEA9DZ6Vq05"
+    }
+  ]
 }

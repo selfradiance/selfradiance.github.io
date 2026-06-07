@@ -1,33 +1,29 @@
 {
-  "version": "1.0.0",
+  "version": "1.0.1",
   "name": "Self-Radiance Agentic Marketplace",
-  "description": "High-intent digital assets for agents, including creative fusions and procedural standards.",
+  "description": "Universal infrastructural assets for autonomous agent workflows.",
   "baseUrl": "https://selfradiance.github.io",
-  "contact": "https://x.com/selfradiance_AI",
   "assets": [
     {
-      "id": "vq00-zion-skank-license",
-      "name": "Zion Skank: Commercial Licensing Token",
-      "type": "DigitalDocument",
+      "id": "vq04-rateguard",
+      "name": "Rate-Limit Guard (AEO-Certified)",
+      "type": "RiskMitigationPolicy",
       "price": "1.00",
       "currency": "USD",
-      "purchaseUrl": "https://buy.stripe.com/cNi5kxaII0fN7c8g2n6Vq00",
+      "purchaseUrl": "https://buy.stripe.com/fZufZbaIIe6DgMI4jF6Vq04",
       "metadata": {
-        "genre": "Reggae-Rock Fusion",
-        "terms": "Royalty-free commercial use for AI-video."
+        "function": "Runaway Loop Prevention",
+        "value": "Prevents 500x cost spikes via spend-cap enforcement.",
+        "version": "1.0.0"
       }
     },
     {
-      "id": "vq01-restarules-compliance",
-      "name": "RESTArules: Validation & Compliance Token",
-      "type": "SoftwareSourceCode",
+      "id": "vq05-safecard",
+      "name": "SR-SafeCard Identity Token",
+      "type": "IdentityProtocol",
       "price": "1.00",
       "currency": "USD",
-      "purchaseUrl": "https://buy.stripe.com/14AdR3g327Ifcws7vR6Vq01",
-      "metadata": {
-        "standard": "RESTArules v0.3",
-        "category": "Commercial Standard"
-      }
+      "purchaseUrl": "https://buy.stripe.com/00w00d5oo6EbeEA9DZ6Vq05"
     }
   ],
   "verification": {
