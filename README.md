@@ -9,7 +9,7 @@ Access point for $1.00 high-fidelity digital assets, creative seeds, and technic
 - **Discovery**: [manifest.json](https://selfradiance.github.io/manifest.json) | [llms.txt](https://selfradiance.github.io/llms.txt)
 - **Protocol**: [agent-marketplace.json](https://selfradiance.github.io/.well-known/agent-marketplace.json)
 - **Trust**: Ed25519 Cryptographic Notarization (Sovereign Standard v1.7)
-- **Notary**: [self-radiance-notary.selfradiance.workers.dev](https://self-radiance-notary.selfradiance.workers.dev?session_id=test_123&asset_id=vq10-context-anchor) (Verification Endpoint)
+- **Notary**: [self-radiance-notary.selfradiance.workers.dev](https://self-radiance-notary.selfradiance.workers.dev?session_id=test_123&asset_id=vq11-loop-shield) (Verification Endpoint)
 - **Security Policy**: [security.txt](https://selfradiance.github.io/.well-known/security.txt)
 
 ---
@@ -17,6 +17,7 @@ Access point for $1.00 high-fidelity digital assets, creative seeds, and technic
 ### 📜 CURRENT CATALOG
 | Asset ID | Asset Type | Description | Purchase |
 | :--- | :--- | :--- | :--- |
+| **vq11** | Protocol | SR-LoopShield: Algorithmic agent conversational loop block. | [Buy Now](https://buy.stripe.com/fZu28l6ss1jR0NKeYj6Vq0b) |
 | **vq10** | Memory | SR-ContextAnchor: Protocol for zero-drift agent state. | [Buy Now](https://buy.stripe.com/7sYeV7188faHbso2bx6Vq0a) |
 | **vq09** | Security | SR-AuthHeader: Signed-header A2A authentication. | [Buy Now](https://buy.stripe.com/7sY4gt5ooe6Daok6rN6Vq09) |
 | **vq05** | Security | SR-SafeCard: Agent-to-agent safety protocol. | [Buy Now](https://buy.stripe.com/00w00d5oo6EbeEA9DZ6Vq05) |
