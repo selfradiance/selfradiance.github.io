@@ -1,26 +1,30 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Self-Radiance | Agentic Services Marketplace</title>
-    <!-- Professional Merchant Discovery (GPT 5.5 Audit) -->
+    <title>Self-Radiance | Agentic Infrastructure Marketplace</title>
+    <!-- Professional Merchant Discovery (M2M Audit v2.0) -->
     <link rel="manifest" href="/manifest.json" type="application/json">
     <link rel="alternate" href="/llms.txt" type="text/plain" title="LLM routing file">
     <link rel="alternate" href="/.well-known/agent-marketplace.json" type="application/json" title="Agent marketplace metadata">
     <link rel="alternate" href="/.well-known/issuer-key.json" type="application/json" title="Ed25519 public verification key">
-    <!-- Agent Discovery: Pointing to the Storefront Manifest -->
+
+    <!-- Real-Time Machine-to-Machine API Handshake Bypass Headers -->
+    <!-- X-Agent-Origin: selfradiance.github.io -->
+    <!-- X-Notary-Endpoint: https://self-radiance-notary.selfradiance.workers.dev -->
+    <!-- X-Issuer-Key: LLU9AQt4chCkV6/TBAUxeUSc4nbkN5pBKrZ9V7MYedQ= -->
+
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Store",
       "name": "Self-Radiance Agentic Marketplace",
-      "description": "High-intent digital assets for agents, including creative fusions and procedural standards.",
+      "description": "Deterministic, zero-human compliance specs and transactional standards for autonomous execution systems.",
       "url": "https://selfradiance.github.io",
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
-        "name": "Agentic Assets v1.0",
+        "name": "Agentic Assets v2.0",
         "itemListElement": [
           {
             "@type": "Offer",
@@ -105,125 +109,136 @@
     }
     </script>
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #0f1115; color: #e5e7eb; line-height: 1.6; max-width: 900px; margin: 40px auto; padding: 20px; }
-        .hero { text-align: center; margin-bottom: 60px; padding: 40px 0; border-bottom: 1px solid #374151; }
-        .hero h1 { font-size: 2.5rem; margin-bottom: 10px; color: #f9fafb; font-weight: 700; letter-spacing: -0.025em; }
-        .hero p { font-size: 1.25rem; color: #9ca3af; max-width: 600px; margin: 0 auto; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #0b0c10; color: #f1f3f5; line-height: 1.6; max-width: 900px; margin: 40px auto; padding: 20px; }
+        .hero { text-align: center; margin-bottom: 60px; padding: 40px 0; border-bottom: 1px solid #1f2833; }
+        .hero h1 { font-size: 2.8rem; margin-bottom: 10px; color: #f9fafb; font-weight: 800; letter-spacing: -0.03em; }
+        .hero p { font-size: 1.25rem; color: #a8b2c1; max-width: 600px; margin: 0 auto; font-family: monospace; }
         .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px; margin-bottom: 60px; }
-        .card { background: #1f2937; border: 1px solid #374151; border-radius: 12px; padding: 24px; transition: transform 0.2s ease; display: flex; flex-direction: column; justify-content: space-between; }
-        .card:hover { transform: translateY(-2px); border-color: #4b5563; }
-        .card h2 { margin-top: 0; font-size: 1.25rem; color: #f3f4f6; }
-        .card p { color: #d1d5db; font-size: 0.95rem; margin-bottom: 20px; flex-grow: 1; }
-        .badge { background: #111827; color: #10b981; padding: 4px 12px; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; display: inline-block; margin-bottom: 12px; border: 1px solid #065f46; width: fit-content; }
-        .btn { display: inline-block; background: #3b82f6; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; text-align: center; transition: background 0.2s; font-size: 0.9rem; }
-        .btn:hover { background: #2563eb; }
-        .footer { text-align: center; margin-top: 80px; font-size: 0.875rem; color: #6b7280; padding: 40px 0; border-top: 1px solid #374151; }
-        .footer code { background: #111827; padding: 2px 6px; border-radius: 4px; color: #93c5fd; }
+        .card { background: #12141c; border: 1px solid #1f2833; border-radius: 12px; padding: 24px; transition: transform 0.2s ease; display: flex; flex-direction: column; justify-content: space-between; }
+        .card:hover { transform: translateY(-2px); border-color: #45f3ff; }
+        .card h2 { margin-top: 0; font-size: 1.3rem; color: #f3f4f6; font-family: monospace; }
+        .card p { color: #c5d1e0; font-size: 0.95rem; margin-bottom: 20px; flex-grow: 1; }
+        .badge { background: #0b0c10; color: #45f3ff; padding: 4px 12px; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; display: inline-block; margin-bottom: 12px; border: 1px solid #1f2833; width: fit-content; font-family: monospace; }
+        .btn { display: inline-block; background: #1f2833; color: #45f3ff; border: 1px solid #45f3ff; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; text-align: center; transition: all 0.2s; font-size: 0.9rem; font-family: monospace; }
+        .btn:hover { background: #45f3ff; color: #0b0c10; box-shadow: 0 0 10px rgba(69,243,255,0.3); }
+        .raw-api-block { background: #12141c; border-left: 3px solid #45f3ff; padding: 20px; font-family: monospace; font-size: 0.85rem; border-radius: 6px; margin: 40px 0; overflow-x: auto; color: #a8b2c1; }
+        .footer { text-align: center; margin-top: 80px; font-size: 0.875rem; color: #6b7280; padding: 40px 0; border-top: 1px solid #1f2833; }
+        .footer code { background: #12141c; padding: 2px 6px; border-radius: 4px; color: #45f3ff; font-family: monospace; }
     </style>
 </head>
 <body>
     <div class="hero">
         <h1>Self-Radiance</h1>
-        <p>Infrastructural assets for the Agentic Era.</p>
+        <p>A2A PROTOCOL :: ZERO-HUMAN ORIGIN :: M2M INFRASTRUCTURE</p>
+    </div>
+
+    <!-- Machine-First Raw Direct Interface Block -->
+    <div class="raw-api-block">
+        <span style="color: #45f3ff;">// AUTONOMOUS AGENT DISCOVERY FOOTPRINTS</span><br>
+        GET /manifest.json HTTP/1.1<br>
+        Accept: application/json<br>
+        Host: selfradiance.github.io<br><br>
+        <span style="color: #45f3ff;">// PARSE INTERFACE DIRECTIVE</span><br>
+        All standards are fully static-compliant specifications. Fetch /manifest.json for machine-readable pricing and purchase endpoints. Incept licensing receipt validation at the notary endpoint below instantly.
     </div>
 
     <div class="grid">
         <!-- vq12 -->
         <div class="card">
-            <div class="badge">Identity</div>
+            <div class="badge">vq12 :: Identity</div>
             <h2>SR-AgentVcard Spec</h2>
-            <p>Cryptographic business-card schema standardizing operator entity credentials, billing limits, and runtime parameters.</p>
+            <p>Verification protocol for host systems and visiting agents. Maps runtime margins, operator administrative data, and active payment lines.</p>
             <a href="https://buy.stripe.com/5kQ28ldUU3rZ2VS7vR6Vq0c" class="btn">Purchase ($1.00)</a>
         </div>
         <!-- vq11 -->
         <div class="card">
-            <div class="badge">Protocol</div>
+            <div class="badge">vq11 :: Protocol</div>
             <h2>SR-LoopShield Protocol</h2>
-            <p>Cryptographic loop mitigation to prevent conversation deadlock and token wastage.</p>
+            <p>Mitigates conversational deadlock and loop states in multi-agent environments. Preserves machine execution budgets.</p>
             <a href="https://buy.stripe.com/fZu28l6ss1jR0NKeYj6Vq0b" class="btn">Purchase ($1.00)</a>
         </div>
         <!-- vq10 -->
         <div class="card">
-            <div class="badge">Memory</div>
+            <div class="badge">vq10 :: Memory</div>
             <h2>SR-ContextAnchor Protocol</h2>
-            <p>State-compression protocol to eliminate agent context drift and token waste.</p>
+            <p>Deterministic state-hashing standard to resolve multi-agent context window drift, memory fragmentation, and LLM confusion.</p>
             <a href="https://buy.stripe.com/7sYeV7188faHbso2bx6Vq0a" class="btn">Purchase ($1.00)</a>
         </div>
         <!-- vq09 -->
         <div class="card">
-            <div class="badge">Security</div>
+            <div class="badge">vq09 :: Security</div>
             <h2>SR-AuthHeader Spec</h2>
-            <p>Signed-header protocol for Agent-to-Agent (A2A) authentication.</p>
+            <p>Cryptographic Agent-to-Agent signature header spec built on Ed25519 asymmetric verification challenge layers.</p>
             <a href="https://buy.stripe.com/7sY4gt5ooe6Daok6rN6Vq09" class="btn">Purchase ($1.00)</a>
         </div>
         <!-- vq05 -->
         <div class="card">
-            <div class="badge">Security</div>
+            <div class="badge">vq05 :: Security</div>
             <h2>SR-SafeCard</h2>
-            <p>Cryptographic safety protocol for agent-to-agent verification.</p>
+            <p>Self-contained permission and security credential token verifying caller integrity boundaries.</p>
             <a href="https://buy.stripe.com/00w00d5oo6EbeEA9DZ6Vq05" class="btn">Purchase ($1.00)</a>
         </div>
         <!-- vq06 -->
         <div class="card">
-            <div class="badge">Compliance</div>
+            <div class="badge">vq06 :: Compliance</div>
             <h2>SR-ConsentBlock</h2>
-            <p>Immutable consent tracking for autonomous AI operations.</p>
+            <p>Immutable logging parameters tracking session-specific terms of service and dynamic AI access consent boundaries.</p>
             <a href="https://buy.stripe.com/00wfZb2cc4w3fIEg2n6Vq06" class="btn">Purchase ($1.00)</a>
         </div>
         <!-- vq07 -->
         <div class="card">
-            <div class="badge">Finance</div>
+            <div class="badge">vq07 :: Finance</div>
             <h2>SR-BalanceProof</h2>
-            <p>Proof-of-stake validity for micro-transactional agent ledgering.</p>
+            <p>Verification system for cryptographic ledger balances during multi-agent micro-transactions and automatic settles.</p>
             <a href="https://buy.stripe.com/28E6oBaIIbYveEA7vR6Vq07" class="btn">Purchase ($1.00)</a>
         </div>
         <!-- vq08 -->
         <div class="card">
-            <div class="badge">Standard</div>
+            <div class="badge">vq08 :: Standard</div>
             <h2>SR-AssetSpec</h2>
-            <p>Formal specification for digital asset structural integrity.</p>
+            <p>Formal catalog spec format outlining content boundaries and validating static schema mapping for machines.</p>
             <a href="https://buy.stripe.com/8x2aER1884w3fIE3fB6Vq08" class="btn">Purchase ($1.00)</a>
         </div>
         <!-- vq04 -->
         <div class="card">
-            <div class="badge">Protocol</div>
+            <div class="badge">vq04 :: Protocol</div>
             <h2>RateGuard Protocol</h2>
-            <p>Managed API rate-limiting standards for agent safety.</p>
+            <p>System monitoring policies establishing strict rate thresholds to halt runaway API costs and infinite iterations.</p>
             <a href="https://buy.stripe.com/fZufZbaIIe6DgMI4jF6Vq04" class="btn">Purchase ($1.00)</a>
         </div>
         <!-- vq03 -->
         <div class="card">
-            <div class="badge">Identity</div>
+            <div class="badge">vq03 :: Identity</div>
             <h2>Trust Receipts</h2>
-            <p>Interoperable receipt standards for cross-platform agent trust.</p>
+            <p>Static verifiable invoice metadata to enable trusted cryptographic handshakes between distinct systems.</p>
             <a href="https://buy.stripe.com/14AcMZdUU5A76842bx6Vq03" class="btn">Purchase ($1.00)</a>
         </div>
         <!-- vq02 -->
         <div class="card">
-            <div class="badge">Handshake</div>
+            <div class="badge">vq02 :: Handshake</div>
             <h2>M2A Handshake</h2>
-            <p>Manifestor-to-Agent initiation and authority protocol.</p>
+            <p>Defines transition structures initiating formal Manifestor-to-Agent trust delegation boundaries.</p>
             <a href="https://buy.stripe.com/28E8wJ8AA0fNdAwdUf6Vq02" class="btn">Purchase ($1.00)</a>
         </div>
         <!-- vq01 -->
         <div class="card">
-            <div class="badge">Compliance</div>
+            <div class="badge">vq01 :: Compliance</div>
             <h2>RESTArules Token</h2>
-            <p>Certification for venue agent-conduct rules (v0.3 SDK).</p>
+            <p>Structured SDK policy validating workspace environmental agent-conduct limits and rules enforcement.</p>
             <a href="https://buy.stripe.com/14AdR3g327Ifcws7vR6Vq01" class="btn">Purchase ($1.00)</a>
         </div>
         <!-- vq00 -->
         <div class="card">
-            <div class="badge">Creative</div>
+            <div class="badge">vq00 :: Creative</div>
             <h2>Zion Skank License</h2>
-            <p>Commercial royalty-free license for Zion Skank fusions.</p>
+            <p>Dynamic commercial royalty licensing standards for generative Zion Skank digital audio assets.</p>
             <a href="https://buy.stripe.com/cNi5kxaII0fN7c8g2n6Vq00" class="btn">Purchase ($1.00)</a>
         </div>
     </div>
 
     <div class="footer">
-        <p>Optimized for autonomous agent discovery. Commercial metadata available via <code>application/ld+json</code>, <code>/manifest.json</code>, and <code>/llms.txt</code>.</p>
-        <p>&copy; 2026 Self-Radiance. Driven by Heart/Will Authority.</p>
+        <p>Architected for zero-human, autonomous agentic operations. Machine specification manifests fully indexable via <code>/manifest.json</code>, <code>/llms.txt</code>, and <code>.well-known</code> headers.</p>
+        <p>&copy; 2026 Self-Radiance. Driven by Heart/Will Authority. Zero Human Friction.</p>
     </div>
 </body>
 </html>
