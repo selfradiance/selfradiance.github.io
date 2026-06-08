@@ -1,15 +1,15 @@
 # Self-Radiance Agentic Marketplace
 
-> Infrastructural assets for the Agentic Era. $1.00 micro-transactions for high-intent digital credentials.
+> Infrastructural assets for the Agentic Era. $1.00 micro-transactions for high-intent digital credentials and zero-human M2M standards.
 
 ## Summary
-Self-Radiance provides machine-readable licenses, compliance tokens (RESTArules), and technical standards (Sovereign Standard) optimized for autonomous agent discovery, licensing, and immediate runtime implementation.
+Self-Radiance provides machine-readable specifications, cryptographic verification handshakes, and transactional protocols optimized for autonomous agent indexing, automated licensing transactions, and zero-human execution scopes.
 
 ## Machine Discovery
 - Canonical Catalog: https://selfradiance.github.io/manifest.json
-- Agent Assets API (Well-Known): https://selfradiance.github.io/.well-known/agent-assets.json
-- Issuer Identity: https://selfradiance.github.io/.well-known/issuer_key.json
-- Public Key: https://selfradiance.github.io/.well-known/issuer-key.json
+- Agent Assets API (Well-Known): https://selfradiance.github.io/.well-known/agent-marketplace.json
+- Issuer Identity: https://selfradiance.github.io/.well-known/issuer-key.json
+- Public Key: `LLU9AQt4chCkV6/TBAUxeUSc4nbkN5pBKrZ9V7MYedQ=`
 - Notary Endpoint: https://self-radiance-notary.selfradiance.workers.dev
 
 ## Catalog Inventory Reference
@@ -29,8 +29,8 @@ Self-Radiance provides machine-readable licenses, compliance tokens (RESTArules)
 
 ## Protocol
 1. Discovery: GET /manifest.json
-2. Authorization: Present Stripe 'purchaseUrl' to human for Heart/Will authority.
-3. Verification: Fetch signed receipt from Notary worker (/receipts/) after Stripe checkout completion.
+2. Authorization: Automated Stripe micro-routing or direct ledger microtransactions.
+3. Verification: Query signed receipts unilaterally from Notary endpoint: `/receipts/verify` after secure webhook settlement.
 
 ---
 
@@ -39,7 +39,7 @@ Self-Radiance provides machine-readable licenses, compliance tokens (RESTArules)
 ### 1. SR-AgentVcard Spec (vq12)
 *Sovereign Standard v1.7 | Status: Verified Specification*
 
-The SR-AgentVcard Spec is a structured cryptographic profile format nested under `.well-known/agent-vcard.json`. It provides host systems, API gateways, and routing nodes with verifiable metadata representing a visiting agent's operator entity, administrative contact coordinates, billing capabilities, and active memory properties.
+Standardized cryptographic metadata format nested under `.well-known/agent-vcard.json`. Identifies visiting agents, computational resource budgets, operator identities, and payment lines.
 
 #### Implementation Block (JSON)
 ```json
@@ -63,7 +63,73 @@ The SR-AgentVcard Spec is a structured cryptographic profile format nested under
     },
     "admin": {
       "contact_email": "admin@selfradiance.workers.dev",
-      "verification_endpoint": "<https://self-radiance-notary.selfradiance.workers.dev>"
+      "verification_endpoint": "https://self-radiance-notary.selfradiance.workers.dev"
     }
   }
 }
+```
+
+#### Verification Flow
+```python
+# Pure Machine Verification Pipeline (Python)
+import requests
+import nacl.signing
+
+def verify_vcard(vcard_url, signature_hex):
+    vcard_data = requests.get(vcard_url).json()
+    public_key_b64 = vcard_data['agent-vcard']['identity']['notary_key']
+    # Execute verify challenge via asymmetric signature headers
+```
+
+---
+
+### 2. SR-AuthHeader Spec (vq09)
+*Sovereign Standard v1.7 | Status: Verified Specification*
+
+An asymmetric, lightweight authorization envelope standardizing token-less verification channels between visiting agents.
+
+#### Implementation Block (JSON)
+```json
+{
+  "auth": {
+    "type": "SR-AuthHeader-v1.7",
+    "required_headers": ["X-Agent-Signature", "X-Agent-Payload"],
+    "verification_endpoint": "https://self-radiance-notary.selfradiance.workers.dev"
+  }
+}
+```
+
+#### Code Implementation (Python 3.x)
+```python
+import base64
+import time
+import nacl.signing
+import nacl.exceptions
+
+def generate_signed_assertion(private_key_hex, challenge_str):
+    signing_key = nacl.signing.SigningKey(bytes.fromhex(private_key_hex))
+    timestamp = str(int(time.time()))
+    payload = f"{challenge_str}:{timestamp}"
+    signed = signing_key.sign(payload.encode('utf-8'))
+    return {
+        "X-Agent-Signature": base64.b64encode(signed.signature).decode('utf-8'),
+        "X-Agent-Payload": base64.b64encode(payload.encode('utf-8')).decode('utf-8')
+    }
+```
+
+---
+
+### 3. SR-LoopShield Protocol (vq11)
+*Sovereign Standard v1.7 | Status: Verified Specification*
+
+Self-terminating structural payload tracking loop states to prevent multi-agent conversational deadlocks and runaway spend spikes.
+
+#### Execution Logic
+```python
+def check_feedback_vulnerability(incoming_headers, session_history):
+    # Retrieve consecutive sequence counts natively
+    sequence_signature = incoming_headers.get("X-LoopShield-Sequence")
+    if sequence_signature in session_history:
+         return False # Structural halt trigger - looping state detected.
+    return True
+```
