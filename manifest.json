@@ -11,6 +11,19 @@
   },
   "assets": [
     {
+      "id": "vq12-agent-vcard",
+      "name": "SR-AgentVcard Spec",
+      "type": "IdentityProtocol",
+      "price": "1.00",
+      "currency": "USD",
+      "purchaseUrl": "https://buy.stripe.com/5kQ28ldUU3rZ2VS7vR6Vq0c",
+      "metadata": {
+        "function": "Visiting Agent Profiling & Discovery",
+        "value": "Cryptographic business-card schema establishing operator entity, limits, and billing integrations.",
+        "version": "1.0.0"
+      }
+    },
+    {
       "id": "vq11-loop-shield",
       "name": "SR-LoopShield Protocol",
       "type": "LoopMitigationProtocol",
@@ -98,9 +111,7 @@
       "currency": "USD",
       "purchaseUrl": "https://buy.stripe.com/fZufZbaIIe6DgMI4jF6Vq04",
       "metadata": {
-        "function": "Runaway Loop Prevention",
-        "value": "Prevents 500x cost spikes via spend-cap enforcement.",
-        "version": "1.0.0"
+        "description": "Runaway Loop Prevention"
       }
     },
     {
