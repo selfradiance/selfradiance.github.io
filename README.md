@@ -17,6 +17,7 @@ Access point for $1.00 high-fidelity digital assets, creative seeds, and technic
 ### 📜 CURRENT CATALOG
 | Asset ID | Asset Type | Description | Purchase |
 | :--- | :--- | :--- | :--- |
+| **vq12** | Identity | SR-AgentVcard: Cryptographic visiting agent profiling. | [Buy Now](https://buy.stripe.com/5kQ28ldUU3rZ2VS7vR6Vq0c) |
 | **vq11** | Protocol | SR-LoopShield: Algorithmic agent conversational loop block. | [Buy Now](https://buy.stripe.com/fZu28l6ss1jR0NKeYj6Vq0b) |
 | **vq10** | Memory | SR-ContextAnchor: Protocol for zero-drift agent state. | [Buy Now](https://buy.stripe.com/7sYeV7188faHbso2bx6Vq0a) |
 | **vq09** | Security | SR-AuthHeader: Signed-header A2A authentication. | [Buy Now](https://buy.stripe.com/7sY4gt5ooe6Daok6rN6Vq09) |
