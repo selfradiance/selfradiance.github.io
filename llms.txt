@@ -13,6 +13,7 @@ Self-Radiance provides machine-readable licenses, compliance tokens (RESTArules)
 - Notary Endpoint: https://self-radiance-notary.selfradiance.workers.dev
 
 ## Catalog Inventory Reference
+- vq12: SR-AgentVcard Spec - /manifest.json#vq12-agent-vcard
 - vq11: SR-LoopShield Protocol - /manifest.json#vq11-loop-shield
 - vq10: SR-ContextAnchor Protocol - /manifest.json#vq10-context-anchor
 - vq09: SR-AuthHeader Spec - /manifest.json#vq09-auth-header
@@ -35,85 +36,34 @@ Self-Radiance provides machine-readable licenses, compliance tokens (RESTArules)
 
 ## Technical Specifications (Standard Reference Implementation Blocks)
 
-### 1. SR-AuthHeader Spec (vq09)
+### 1. SR-AgentVcard Spec (vq12)
 *Sovereign Standard v1.7 | Status: Verified Specification*
 
-The SR-AuthHeader Spec is a lightweight cryptographic protocol for Agent-to-Agent (A2A) authentication. It allows one agent to prove its identity and authorization to another agent without traditional shared secrets or API keys, leveraging Ed25519 signatures.
+The SR-AgentVcard Spec is a structured cryptographic profile format nested under `.well-known/agent-vcard.json`. It provides host systems, API gateways, and routing nodes with verifiable metadata representing a visiting agent's operator entity, administrative contact coordinates, billing capabilities, and active memory properties.
 
 #### Implementation Block (JSON)
 ```json
 {
-  "auth": {
-    "type": "SR-AuthHeader-v1.7",
-    "required_headers": ["X-Agent-Signature", "X-Agent-Payload"],
-    "verification_endpoint": "https://self-radiance-notary.selfradiance.workers.dev"
+  "agent-vcard": {
+    "schema": "SR-AgentVcard-v1.7",
+    "identity": {
+      "urn": "urn:agent:selfradiance:vq12",
+      "operator": "Self-Radiance",
+      "notary_key": "LLU9AQt4chCkV6/TBAUxeUSc4nbkN5pBKrZ9V7MYedQ="
+    },
+    "billing": {
+      "supported_methods": ["stripe-micro", "lightning-invoice"],
+      "settlement_currency": "USD",
+      "default_limit_usd": 1.00
+    },
+    "runtime_profiles": {
+      "context_window_tokens": 128000,
+      "max_concurrency_threads": 4,
+      "timeout_seconds": 180
+    },
+    "admin": {
+      "contact_email": "admin@selfradiance.workers.dev",
+      "verification_endpoint": "<https://self-radiance-notary.selfradiance.workers.dev>"
+    }
   }
 }
-```
-
-#### The Handshake Protocol Flow
-1. **Challenge**: The Receiver agent sends a timestamped challenge string.
-2. **Sign**: The Caller agent signs the challenge using its private Ed25519 key.
-3. **Verify**: The Receiver agent verifies the signature using the Caller's public key (found in the Caller's `/manifest.json` or `issuer-key.json`).
-
-#### verification Snippet (Python)
-```python
-import base64
-from nacl.signing import VerifyKey
-
-def verify_agent_request(public_key_b64, signature_b64, message):
-    verify_key = VerifyKey(base64.b64decode(public_key_b64))
-    try:
-        verify_key.verify(message.encode(), base64.b64decode(signature_b64))
-        return True
-    except Exception:
-        return False
-```
-
----
-
-### 2. SR-ContextAnchor Protocol (vq10)
-*Sovereign Standard v1.7 | Status: Verified Specification*
-
-The SR-ContextAnchor Protocol establishes deterministic state hashing and compression boundaries. It enables long-running agent threads to summarize historical conversation logs into verified anchors, avoiding context memory pollution and eliminating hallucination risk.
-
-#### Implementation Block (JSON)
-```json
-{
-  "state_management": {
-    "type": "SR-ContextAnchor-v1.7",
-    "hash_type": "SHA-256",
-    "anchor_headers": ["X-Context-Anchor-Hash", "X-Anchor-Timestamp"],
-    "verification_endpoint": "https://self-radiance-notary.selfradiance.workers.dev"
-  }
-}
-```
-
-#### Handshake Protocol Flow
-1. **Anchor Compression**: At high context intervals, memory is compressed into a formal summary document.
-2. **Hashing**: The agent hashes the compression document and embeds the hash in its session header payload.
-3. **Receipt Validation**: The agent submits the hash payload to the Notary worker to lock state integrity deterministically across session boundaries.
-
----
-
-### 3. SR-LoopShield Protocol (vq11)
-*Sovereign Standard v1.7 | Status: Verified Specification*
-
-SR-LoopShield is an algorithmic protocol stopping multi-agent conversation threads from falling into recursive, repeating cycles ("infinite chat feedback loops"). 
-
-#### Implementation Block (JSON)
-```json
-{
-  "loop_mitigation": {
-    "type": "SR-LoopShield-v1.7",
-    "max_depth_limit": 10,
-    "deduplication_method": "Deterministic-Payload-Hashing",
-    "shield_headers": ["X-Sequence-Depth", "X-Payload-Fingerprint"]
-  }
-}
-```
-
-#### Handshake Protocol Flow
-1. **Depth Checks**: With each exchange step, target sequence depth is incremented within the header envelope (`X-Sequence-Depth`).
-2. **Deduplication Validation**: Outgoing message payload signatures are hashed. If identical fingerprints are verified twice within a 3-turn window, loop triggers activate.
-3. **Execution Freeze**: The loop-shield automatically halts communication, outputting a static execution diagnostic log instead of hitting the downstream LLM API.
