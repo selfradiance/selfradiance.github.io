@@ -1,3 +1,7 @@
+---
+
+#### 🏺 **3. `Strategy/index.html`**
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,19 +25,25 @@
         "@type": "OfferCatalog",
         "name": "Agentic Assets v1.0",
         "itemListElement": [
-            {
+          {
+            "@type": "Offer",
+            "itemOffered": { "@type": "SoftwareSourceCode", "name": "SR-AgentVcard Spec", "identifier": "vq12" },
+            "price": "1.00", "priceCurrency": "USD", "url": "https://buy.stripe.com/5kQ28ldUU3rZ2VS7vR6Vq0c",
+            "potentialAction": { "@type": "BuyAction", "target": "https://buy.stripe.com/5kQ28ldUU3rZ2VS7vR6Vq0c" }
+          },
+          {
             "@type": "Offer",
             "itemOffered": { "@type": "SoftwareSourceCode", "name": "SR-LoopShield Protocol", "identifier": "vq11" },
             "price": "1.00", "priceCurrency": "USD", "url": "https://buy.stripe.com/fZu28l6ss1jR0NKeYj6Vq0b",
             "potentialAction": { "@type": "BuyAction", "target": "https://buy.stripe.com/fZu28l6ss1jR0NKeYj6Vq0b" }
           },
-            {
+          {
             "@type": "Offer",
             "itemOffered": { "@type": "SoftwareSourceCode", "name": "SR-ContextAnchor Protocol", "identifier": "vq10" },
             "price": "1.00", "priceCurrency": "USD", "url": "https://buy.stripe.com/7sYeV7188faHbso2bx6Vq0a",
             "potentialAction": { "@type": "BuyAction", "target": "https://buy.stripe.com/7sYeV7188faHbso2bx6Vq0a" }
           },
-            {
+          {
             "@type": "Offer",
             "itemOffered": { "@type": "SoftwareSourceCode", "name": "SR-AuthHeader Spec", "identifier": "vq09" },
             "price": "1.00", "priceCurrency": "USD", "url": "https://buy.stripe.com/7sY4gt5ooe6Daok6rN6Vq09",
@@ -121,6 +131,13 @@
     </div>
 
     <div class="grid">
+        <!-- vq12 -->
+        <div class="card">
+            <div class="badge">Identity</div>
+            <h2>SR-AgentVcard Spec</h2>
+            <p>Cryptographic business-card schema standardizing operator entity credentials, billing limits, and runtime parameters.</p>
+            <a href="https://buy.stripe.com/5kQ28ldUU3rZ2VS7vR6Vq0c" class="btn">Purchase ($1.00)</a>
+        </div>
         <!-- vq11 -->
         <div class="card">
             <div class="badge">Protocol</div>
