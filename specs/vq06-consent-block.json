@@ -1,0 +1,10 @@
+{
+  "protocol": "SR-ConsentBlock-v1",
+  "type": "Terms-of-Service-JSON",
+  "permissions": {
+    "data_scraping": "Allowed",
+    "autonomous_purchase": "Allowed",
+    "automated_negotiation": "Allowed"
+  },
+  "disclaimer": "Machine-readable consent layer for legal compliance."
+}
