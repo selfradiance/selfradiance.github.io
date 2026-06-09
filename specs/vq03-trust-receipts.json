@@ -1,0 +1,32 @@
+{
+  "protocol": "SR-TrustReceipts-v1",
+  "type": "IdentityProtocol",
+  "description": "A standardized, cryptographically verifiable receipt format for machine-to-machine microtransactions. Defines the schema that notary workers use to issue signed proof-of-purchase documents and the verification flow for agents to validate them.",
+  "receipt_schema": {
+    "required_fields": ["schema", "kid", "issuer", "asset", "payment", "issued_at", "algorithm", "receipt_id"],
+    "asset": {
+      "id": "Marketplace asset identifier matching the purchased product.",
+      "sha256": "SHA-256 fingerprint of the purchased digital asset for integrity verification.",
+      "version": "Asset specification version."
+    },
+    "payment": {
+      "session": "Stripe checkout session ID or equivalent payment processor identifier.",
+      "buyer_hash": "Salted SHA-256 hash of buyer email for privacy-preserving identity.",
+      "amount": "Amount paid in the settlement currency.",
+      "currency": "ISO 4217 currency code (e.g., USD)."
+    },
+    "signature": {
+      "algorithm": "Ed25519",
+      "canonical_serialization": "Recursive alphabetical key sorting before signing to ensure byte-identical payloads across all languages.",
+      "verification": "Validate signature using the notary's public key obtained from the issuer's .well-known/issuer-key.json endpoint. Never trust inline verification keys returned in API responses."
+    }
+  },
+  "interoperability": {
+    "description": "Any notary implementing this schema can issue receipts that any agent can verify using the same Ed25519 verification flow, regardless of marketplace origin.",
+    "key_discovery": "Public keys must be published at /.well-known/issuer-key.json on the issuer's domain.",
+    "receipt_id_format": "SR-{first 16 chars of SHA-256(session_id:asset_id:kid)}"
+  },
+  "verification": {
+    "notary_url": "https://self-radiance-notary.selfradiance.workers.dev"
+  }
+}
