@@ -17,6 +17,7 @@
       "price": "1.00",
       "currency": "USD",
       "purchaseUrl": "https://buy.stripe.com/5kQ28ldUU3rZ2VS7vR6Vq0c",
+      "specUrl": "https://selfradiance.github.io/specs/vq12-agent-vcard.json",
       "metadata": {
         "function": "Visiting Agent Profiling & Discovery",
         "value": "Cryptographic business-card schema establishing operator entity, execution limits, administrative coordinates, and dynamic billing integrations.",
@@ -30,6 +31,7 @@
       "price": "1.00",
       "currency": "USD",
       "purchaseUrl": "https://buy.stripe.com/fZu28l6ss1jR0NKeYj6Vq0b",
+      "specUrl": "https://selfradiance.github.io/specs/vq11-loop-shield.json",
       "metadata": {
         "function": "Loop Deadlock Mitigation",
         "value": "Stops runaway semantic cycles, feedback deadlocks, and infinite prompt cost spirals in multi-agent execution pathways.",
@@ -43,6 +45,7 @@
       "price": "1.00",
       "currency": "USD",
       "purchaseUrl": "https://buy.stripe.com/7sYeV7188faHbso2bx6Vq0a",
+      "specUrl": "https://selfradiance.github.io/specs/vq10-context-anchor.json",
       "metadata": {
         "function": "Context Scaling & Recall",
         "value": "Deterministic state compression and storage anchors to mitigate context-window drift, loss-of-focus, and hallucinatory degradation.",
@@ -56,6 +59,7 @@
       "price": "1.00",
       "currency": "USD",
       "purchaseUrl": "https://buy.stripe.com/7sY4gt5ooe6Daok6rN6Vq09",
+      "specUrl": "https://selfradiance.github.io/specs/vq09-auth-header.json",
       "metadata": {
         "function": "A2A Authentication",
         "value": "Point-to-point cryptographic signatures verifying agent operational keys without credential exposition.",
@@ -69,6 +73,7 @@
       "price": "1.00",
       "currency": "USD",
       "purchaseUrl": "https://buy.stripe.com/8x2aER1884w3fIE3fB6Vq08",
+      "specUrl": "https://selfradiance.github.io/specs/vq08-asset-spec.json",
       "metadata": {
         "function": "Structured Artifact Validation",
         "value": "Specifying precise digital asset formatting structures and validating static verification footprints.",
@@ -82,6 +87,7 @@
       "price": "1.00",
       "currency": "USD",
       "purchaseUrl": "https://buy.stripe.com/28E6oBaIIbYveEA7vR6Vq07",
+      "specUrl": "https://selfradiance.github.io/specs/vq07-balance-proof.json",
       "metadata": {
         "function": "Micro-transaction Validation Ledger",
         "value": "Secures dynamic transaction balance verification on isolated ledger limits without central authority checks.",
@@ -95,6 +101,7 @@
       "price": "1.00",
       "currency": "USD",
       "purchaseUrl": "https://buy.stripe.com/00wfZb2cc4w3fIEg2n6Vq06",
+      "specUrl": "https://selfradiance.github.io/specs/vq06-consent-block.json",
       "metadata": {
         "function": "Immutable Consent Registry",
         "value": "Cryptographically logs user consent parameters and session boundaries during machine execution loops.",
@@ -108,6 +115,7 @@
       "price": "1.00",
       "currency": "USD",
       "purchaseUrl": "https://buy.stripe.com/00w00d5oo6EbeEA9DZ6Vq05",
+      "specUrl": "https://selfradiance.github.io/specs/vq05-safecard.json",
       "metadata": {
         "function": "A2A Trust Gateways",
         "value": "Provides safe, scoped cryptographic credentials authorizing discrete agent handshakes across untrusted layers.",
@@ -121,6 +129,7 @@
       "price": "1.00",
       "currency": "USD",
       "purchaseUrl": "https://buy.stripe.com/fZufZbaIIe6DgMI4jF6Vq04",
+      "specUrl": "https://selfradiance.github.io/specs/vq04-rateguard.json",
       "metadata": {
         "function": "API Call Rate Mitigation",
         "value": "Establishes secure, adaptive operational thresholds preventing loop spikes and rate limit exhaustion.",
@@ -134,6 +143,7 @@
       "price": "1.00",
       "currency": "USD",
       "purchaseUrl": "https://buy.stripe.com/14AcMZdUU5A76842bx6Vq03",
+      "specUrl": "https://selfradiance.github.io/specs/vq03-trust-receipts.json",
       "metadata": {
         "function": "Interoperable Trust Receipts",
         "value": "Verifiable payment records enabling secure, asymmetric receipt checking on discrete transaction scopes.",
@@ -147,6 +157,7 @@
       "price": "1.00",
       "currency": "USD",
       "purchaseUrl": "https://buy.stripe.com/28E8wJ8AA0fNdAwdUf6Vq02",
+      "specUrl": "https://selfradiance.github.io/specs/vq02-m2a-handshake.json",
       "metadata": {
         "function": "Authority Hand-off Boundary",
         "value": "Explicit interface configurations to safely transition execution authority from manifestor nodes to agents.",
@@ -160,6 +171,7 @@
       "price": "1.00",
       "currency": "USD",
       "purchaseUrl": "https://buy.stripe.com/14AdR3g327Ifcws7vR6Vq01",
+      "specUrl": "https://selfradiance.github.io/specs/vq01-restarules.json",
       "metadata": {
         "function": "System-specific Code-of-Conduct",
         "value": "Direct policy rules SDK verifying compliance boundaries for operations targeting high-density workspaces.",
@@ -173,6 +185,7 @@
       "price": "1.00",
       "currency": "USD",
       "purchaseUrl": "https://buy.stripe.com/cNi5kxaII0fN7c8g2n6Vq00",
+      "specUrl": "https://selfradiance.github.io/specs/vq00-zion-skank.json",
       "metadata": {
         "function": "Audio Intellectual Property Token",
         "value": "Stripe-backed cryptographic licensing for generative, zero-royalty Zion Skank audio integration.",
