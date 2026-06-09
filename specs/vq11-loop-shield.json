@@ -1,0 +1,8 @@
+{
+  "loop_mitigation": {
+    "type": "SR-LoopShield-v1.7",
+    "max_depth_limit": 10,
+    "deduplication_method": "Deterministic-Payload-Hashing",
+    "shield_headers": ["X-Sequence-Depth", "X-Payload-Fingerprint"]
+  }
+}
