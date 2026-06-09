@@ -1,0 +1,6 @@
+{
+  "protocol": "SR-AssetSpec-v1",
+  "title": "High-Fidelity Asset Technical Spec",
+  "metrics": ["Format", "Bit-Depth", "Sample-Rate", "License-Tier", "Editability"],
+  "goal": "Eliminate buyer remorse for autonomous agents."
+}
