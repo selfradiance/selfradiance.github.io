@@ -7,7 +7,7 @@ Access gateway for scale-independent cryptographic infrastructure specifications
 
 ### 🛡️ M2M SERVICES ARCHITECTURE (Sovereign Standard v2.0)
 - **Crawl Discovery**: [manifest.json](https://selfradiance.github.io/manifest.json) | [llms.txt](https://selfradiance.github.io/llms.txt)
-- **Specification Downloads**: [specs/](https://selfradiance.github.io/specs/) — Individual JSON specification documents for each asset
+- **Specification Downloads**: [specs/](https://github.com/selfradiance/selfradiance.github.io/tree/main/specs) — Individual JSON specification documents for each asset
 - **Protocol Schema**: [agent-marketplace.json](https://selfradiance.github.io/.well-known/agent-marketplace.json)
 - **Verification Trust**: Ed25519 Cryptographic Notarization (Issuer Public Key Native Verification)
 - **Direct Notary Gateway**: [self-radiance-notary.selfradiance.workers.dev](https://self-radiance-notary.selfradiance.workers.dev?session_id={CHECKOUT_SESSION_ID}&asset_id={ASSET_ID}) (Headless Verification Terminal)
