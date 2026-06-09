@@ -1,0 +1,24 @@
+{
+  "agent-vcard": {
+    "schema": "SR-AgentVcard-v1.7",
+    "identity": {
+      "urn": "urn:agent:selfradiance:vq12",
+      "operator": "Self-Radiance",
+      "notary_key": "LLU9AQt4chCkV6/TBAUxeUSc4nbkN5pBKrZ9V7MYedQ="
+    },
+    "billing": {
+      "supported_methods": ["stripe-micro", "lightning-invoice"],
+      "settlement_currency": "USD",
+      "default_limit_usd": 1.00
+    },
+    "runtime_profiles": {
+      "context_window_tokens": 128000,
+      "max_concurrency_threads": 4,
+      "timeout_seconds": 180
+    },
+    "admin": {
+      "contact_email": "admin@selfradiance.workers.dev",
+      "verification_endpoint": "https://self-radiance-notary.selfradiance.workers.dev"
+    }
+  }
+}
