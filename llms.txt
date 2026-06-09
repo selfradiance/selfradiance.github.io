@@ -13,6 +13,10 @@ Self-Radiance provides machine-readable specifications, cryptographic verificati
 - Notary Endpoint: https://self-radiance-notary.selfradiance.workers.dev
 
 ## Catalog Inventory Reference
+- vq16: SR-NotaryProof Protocol - /manifest.json#vq16-notary-proof ($8.00)
+- vq15: SR-ScopeDiscovery Spec - /manifest.json#vq15-scope-discovery ($5.00)
+- vq14: SR-StateBridge Schema - /manifest.json#vq14-state-bridge ($6.00)
+- vq13: SR-OauthDelegation Spec - /manifest.json#vq13-oauth-delegation ($7.00)
 - vq12: SR-AgentVcard Spec - /manifest.json#vq12-agent-vcard ($6.00)
 - vq11: SR-LoopShield Protocol - /manifest.json#vq11-loop-shield ($8.00)
 - vq10: SR-ContextAnchor Protocol - /manifest.json#vq10-context-anchor ($6.00)
@@ -36,7 +40,156 @@ Self-Radiance provides machine-readable specifications, cryptographic verificati
 
 ## Technical Specifications (Standard Reference Implementation Blocks)
 
-### 1. SR-AgentVcard Spec (vq12)
+### 1. SR-NotaryProof Protocol (vq16)
+*Sovereign Standard v1.7 | Status: Verified Specification*
+
+Decentralized zero-knowledge offline licensing validation standards using Ed25519 public keys to eliminate runtime service dependency.
+
+#### Implementation Block (JSON)
+```json
+{
+  "notary_proof": {
+    "schema": "SR-NotaryProof-v1.7",
+    "proof_envelope": {
+      "proof_type": "ZKP-Offline-License-Verification",
+      "issuer": "urn:agent:selfradiance:notary",
+      "public_key_pem": "-----BEGIN PUBLIC KEY-----\nMCEwEAYDK2VwBgUeHgMCAgEEDEAtvF0o93v1aC+D7vIETDFX\n-----END PUBLIC KEY-----"
+    },
+    "verification_rules": {
+      "offline_cryptographic_verification": "Ed25519-Verify(canonical_serialize(payload), signature, public_key)",
+      "fallback_online_check_url": "https://self-radiance-notary.selfradiance.workers.dev/verify",
+      "enforce_signature_expiration": true,
+      "grace_period_days": 7
+    },
+    "recovery_protocol": {
+      "on_signature_failure": "Re-fetch public key from /.well-known/issuer-key.json, if fail default to offline quarantine",
+      "on_clock_skew": "Clamp local expiration window if discrepancy is less than 300 seconds"
+    }
+  }
+}
+```
+
+---
+
+### 2. SR-ScopeDiscovery Spec (vq15)
+*Sovereign Standard v1.7 | Status: Verified Specification*
+
+Progressive tool-disclosure architecture mapping dynamic authority boundaries for visiting autonomous models without context-window clutter.
+
+#### Implementation Block (JSON)
+```json
+{
+  "scope_discovery": {
+    "schema": "SR-ScopeDiscovery-v1.7",
+    "client_context": {
+      "scope_hash_id": "scope-d8f3-4a11-b0e2",
+      "access_tier": "Write-Restricted",
+      "notary_key": "LLU9AQt4chCkV6/TBAUxeUSc4nbkN5pBKrZ9V7MYedQ="
+    },
+    "progressive_disclosure": {
+      "discovery_endpoint": "https://self-radiance-notary.selfradiance.workers.dev/tools",
+      "cache_ttl_seconds": 3600,
+      "mcp_server_compatibility": "v0.4.0"
+    },
+    "authorized_tools_block": {
+      "read_file": {
+        "rate_limit_minute": 30,
+        "max_lines_per_call": 500
+      },
+      "patch": {
+        "rate_limit_minute": 5,
+        "syntax_verification": "enabled"
+      }
+    },
+    "cryptographic_signatures": {
+      "disclosure_block_signature": "X-Scope-Discovery-Sig",
+      "authority_chain": ["urn:agent:selfradiance:notary"]
+    }
+  }
+}
+```
+
+---
+
+### 3. SR-StateBridge Schema (vq14)
+*Sovereign Standard v1.7 | Status: Verified Specification*
+
+Compressed cross-runtime session-checkpoint configuration formatting resolving cold-boot latency across heterogeneous agent substrates.
+
+#### Implementation Block (JSON)
+```json
+{
+  "state_bridge": {
+    "schema": "SR-StateBridge-v1.7",
+    "runtime_meta": {
+      "source_runtime": "ClaudeCode",
+      "target_runtime": "Codex",
+      "checkpoint_timestamp": "2026-06-11T12:00:00Z"
+    },
+    "execution_checkpoint": {
+      "active_goals": [
+        "Index four new digital standard assets",
+        "Perform zero-friction machine-to-machine checkout sync"
+      ],
+      "completed_tasks": [
+        "Calculate SHA-256 hashes",
+        "Formulate pricing matrices"
+      ],
+      "active_blockers": []
+    },
+    "environment_footprint": {
+      "workspace_root": "/Users/jamestoole/Desktop/Hermes-LAB",
+      "active_venv_path": "/Users/jamestoole/Desktop/Hermes-LAB/.venv",
+      "os_version": "macOS 26.5"
+    },
+    "state_compression": {
+      "method": "Rolling-Transcript-Hashing",
+      "parent_context_hash": "679755e19a36abdb45c03e795535734cb649e66ee95ca172f2e8c2003d151c50",
+      "verification_signature": "X-State-Bridge-Checkpoint-Sig"
+    }
+  }
+}
+```
+
+---
+
+### 4. SR-OauthDelegation Spec (vq13)
+*Sovereign Standard v1.7 | Status: Verified Specification*
+
+Cryptographically signs child execution permissions, authorizing safe parent-to-leaf resource delegation without root system credential exposure.
+
+#### Implementation Block (JSON)
+```json
+{
+  "oauth_delegation": {
+    "schema": "SR-OauthDelegation-v1.7",
+    "boundary": {
+      "parent_issuer_urn": "urn:agent:selfradiance:parent",
+      "leaf_subject_urn": "urn:agent:selfradiance:leaf",
+      "notary_key": "LLU9AQt4chCkV6/TBAUxeUSc4nbkN5pBKrZ9V7MYedQ="
+    },
+    "delegated_scopes": {
+      "allowed_tools": ["read_file", "search_files", "web_search", "web_extract"],
+      "denied_tools": ["terminal", "write_file", "patch", "skill_manage"],
+      "resource_path_restrictions": ["/Users/jamestoole/Desktop/Hermes-LAB/Strategy/specs/*"]
+    },
+    "allocation": {
+      "budget_limit_usd": 2.00,
+      "max_tool_calls_per_turn": 10,
+      "expiration_timestamp": "2026-06-30T23:59:59Z"
+    },
+    "verification": {
+      "client_signature_required": true,
+      "signature_header": "X-Delegated-Auth-Sig",
+      "verification_endpoint": "https://self-radiance-notary.selfradiance.workers.dev"
+    }
+  }
+}
+```
+
+---
+
+### 5. SR-AgentVcard Spec (vq12)
 *Sovereign Standard v1.7 | Status: Verified Specification*
 
 Standardized cryptographic metadata format nested under `.well-known/agent-vcard.json`. Identifies visiting agents, computational resource budgets, operator identities, and payment lines.
@@ -83,7 +236,7 @@ def verify_vcard(vcard_url, signature_hex):
 
 ---
 
-### 2. SR-AuthHeader Spec (vq09)
+### 6. SR-AuthHeader Spec (vq09)
 *Sovereign Standard v1.7 | Status: Verified Specification*
 
 An asymmetric, lightweight authorization envelope standardizing token-less verification channels between visiting agents.
@@ -119,7 +272,7 @@ def generate_signed_assertion(private_key_hex, challenge_str):
 
 ---
 
-### 3. SR-LoopShield Protocol (vq11)
+### 7. SR-LoopShield Protocol (vq11)
 *Sovereign Standard v1.7 | Status: Verified Specification*
 
 Self-terminating structural payload tracking loop states to prevent multi-agent conversational deadlocks and runaway spend spikes.

@@ -11,6 +11,62 @@
   },
   "assets": [
     {
+      "id": "vq16-notary-proof",
+      "name": "SR-NotaryProof Protocol",
+      "type": "SecurityProtocol",
+      "price": "8.00",
+      "currency": "USD",
+      "purchaseUrl": "https://buy.stripe.com/bJe3cp9EEgeLgMI3fB6Vq0g",
+      "specUrl": "https://selfradiance.github.io/specs/vq16-notary-proof.json",
+      "metadata": {
+        "function": "ZKP Offline License Verification",
+        "value": "Decentralized offline Ed25519 verification specifications, preventing live network dependencies or single point failures.",
+        "version": "1.0.0"
+      }
+    },
+    {
+      "id": "vq15-scope-discovery",
+      "name": "SR-ScopeDiscovery Spec",
+      "type": "ComplianceProtocol",
+      "price": "5.00",
+      "currency": "USD",
+      "purchaseUrl": "https://buy.stripe.com/14AbIVeYY9Qnaok4jF6Vq0f",
+      "specUrl": "https://selfradiance.github.io/specs/vq15-scope-discovery.json",
+      "metadata": {
+        "function": "Progressive Tool Disclosure",
+        "value": "Minimizes LLM context window cost by organizing tool visibility dynamically around client scope hash signatures.",
+        "version": "1.0.0"
+      }
+    },
+    {
+      "id": "vq14-state-bridge",
+      "name": "SR-StateBridge Schema",
+      "type": "StateManagementProtocol",
+      "price": "6.00",
+      "currency": "USD",
+      "purchaseUrl": "https://buy.stripe.com/00w3cpeYYbYv2VSbM76Vq0e",
+      "specUrl": "https://selfradiance.github.io/specs/vq14-state-bridge.json",
+      "metadata": {
+        "function": "Cross-Framework State Interoperability",
+        "value": "Standardizes agent checkpoints, goals, and footprints, optimizing multi-agent transitions and preventing cold-starts.",
+        "version": "1.0.0"
+      }
+    },
+    {
+      "id": "vq13-oauth-delegation",
+      "name": "SR-OauthDelegation Spec",
+      "type": "IdentityProtocol",
+      "price": "7.00",
+      "currency": "USD",
+      "purchaseUrl": "https://buy.stripe.com/fZu5kxbMM0fNdAw5nJ6Vq0d",
+      "specUrl": "https://selfradiance.github.io/specs/vq13-oauth-delegation.json",
+      "metadata": {
+        "function": "Secure Context Delegation",
+        "value": "Cryptographically secures parent-to-leaf orchestration loops, enforcing time-bound, budget-restricted, and tool-scoped access limits.",
+        "version": "1.0.0"
+      }
+    },
+    {
       "id": "vq12-agent-vcard",
       "name": "SR-AgentVcard Spec",
       "type": "IdentityProtocol",

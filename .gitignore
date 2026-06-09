@@ -4,3 +4,12 @@ notary_worker.js
 .DS_Store
 *.sh
 private_key.txt
+
+# Absolute Machine Privacy: Ignore all local personal and project database context vaults
+Context/
+*.md
+Hermes Article - Personal OS.md
+*.json
+!manifest.json
+!agent-storefront.json
+!zion-skank-agent-manifest.json

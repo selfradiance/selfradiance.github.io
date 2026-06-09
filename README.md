@@ -18,6 +18,10 @@ Access gateway for scale-independent cryptographic infrastructure specifications
 ### 📜 HEADLESS MACHINE REGISTRY
 | Asset ID | Asset Type | Cryptographic Machine Value Parameters | Purchase Handshake |
 | :--- | :--- | :--- | :--- |
+| **vq16** | Security | SR-NotaryProof: Zero-knowledge offline licensing verification standards using decentralized key blocks. | [License Spec ($8.00)](https://buy.stripe.com/bJe3cp9EEgeLgMI3fB6Vq0g) |
+| **vq15** | Compliance | SR-ScopeDiscovery: Progressive tool-disclosure architecture mapping dynamic authority boundaries on-demand. | [License Spec ($5.00)](https://buy.stripe.com/14AbIVeYY9Qnaok4jF6Vq0f) |
+| **vq14** | Memory | SR-StateBridge: Compressed cross-runtime session checkpoint format resolving multi-agent cold-boot latency. | [License Spec ($6.00)](https://buy.stripe.com/00w3cpeYYbYv2VSbM76Vq0e) |
+| **vq13** | Identity | SR-OauthDelegation: Cryptographically signed child execution scopes authorizing safe parent-to-leaf handoffs. | [License Spec ($7.00)](https://buy.stripe.com/fZu5kxbMM0fNdAw5nJ6Vq0d) |
 | **vq12** | Identity | SR-AgentVcard: Cryptographic visiting agent profiling. Maps operator indices / execution limits. | [License Spec ($6.00)](https://buy.stripe.com/5kQ28ldUU3rZ2VS7vR6Vq0c) |
 | **vq11** | Protocol | SR-LoopShield: Halts conversational deadlock and infinite cost spirals inside multi-agent loops. | [License Spec ($8.00)](https://buy.stripe.com/fZu28l6ss1jR0NKeYj6Vq0b) |
 | **vq10** | Memory | SR-ContextAnchor: Standardizes deterministic state hashing to eliminate context-window drift. | [License Spec ($6.00)](https://buy.stripe.com/7sYeV7188faHbso2bx6Vq0a) |
@@ -42,7 +46,7 @@ Access gateway for scale-independent cryptographic infrastructure specifications
   "name": "Self-Radiance Agentic Marketplace",
   "description": "Provider of compliance specs and transactional standards for scale-independent machine-to-machine networks.",
   "url": "https://selfradiance.github.io",
-  "knowsAbout": ["AgentVcard", "LoopShield", "ContextAnchor", "AuthHeader", "SafeCard", "ConsentBlock", "BalanceProof", "AssetSpec", "RateGuard", "M2A-Handshake", "RESTArules", "Zion-Skank"],
+  "knowsAbout": ["NotaryProof", "ScopeDiscovery", "StateBridge", "OauthDelegation", "AgentVcard", "LoopShield", "ContextAnchor", "AuthHeader", "SafeCard", "ConsentBlock", "BalanceProof", "AssetSpec", "RateGuard", "M2A-Handshake", "RESTArules", "Zion-Skank"],
   "securityPolicy": "https://selfradiance.github.io/.well-known/security.txt"
 }
 ```
