@@ -1,0 +1,29 @@
+{
+  "scope_discovery": {
+    "schema": "SR-ScopeDiscovery-v1.7",
+    "client_context": {
+      "scope_hash_id": "scope-d8f3-4a11-b0e2",
+      "access_tier": "Write-Restricted",
+      "notary_key": "LLU9AQt4chCkV6/TBAUxeUSc4nbkN5pBKrZ9V7MYedQ="
+    },
+    "progressive_disclosure": {
+      "discovery_endpoint": "https://self-radiance-notary.selfradiance.workers.dev/tools",
+      "cache_ttl_seconds": 3600,
+      "mcp_server_compatibility": "v0.4.0"
+    },
+    "authorized_tools_block": {
+      "read_file": {
+        "rate_limit_minute": 30,
+        "max_lines_per_call": 500
+      },
+      "patch": {
+        "rate_limit_minute": 5,
+        "syntax_verification": "enabled"
+      }
+    },
+    "cryptographic_signatures": {
+      "disclosure_block_signature": "X-Scope-Discovery-Sig",
+      "authority_chain": ["urn:agent:selfradiance:notary"]
+    }
+  }
+}
