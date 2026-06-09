@@ -1,0 +1,7 @@
+{
+  "protocol": "SR-SafeCard-v1",
+  "declaration": "Tool Safety & Permission Manifest",
+  "risk_taxonomy": ["Low", "Medium", "High", "Critical"],
+  "permission_blocks": ["Read-Only", "Write-Restricted", "Full-Execute"],
+  "logic": "Pre-flight safety check for autonomous tool-use."
+}
