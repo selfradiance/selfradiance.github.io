@@ -1,0 +1,20 @@
+{
+  "notary_proof": {
+    "schema": "SR-NotaryProof-v1.7",
+    "proof_envelope": {
+      "proof_type": "ZKP-Offline-License-Verification",
+      "issuer": "urn:agent:selfradiance:notary",
+      "public_key_pem": "-----BEGIN PUBLIC KEY-----\\nMCEwEAYDK2VwBgUeHgMCAgEEDEAtvF0o93v1aC+D7vIETDFX\\n-----END PUBLIC KEY-----"
+    },
+    "verification_rules": {
+      "offline_cryptographic_verification": "Ed25519-Verify(canonical_serialize(payload), signature, public_key)",
+      "fallback_online_check_url": "https://self-radiance-notary.selfradiance.workers.dev/verify",
+      "enforce_signature_expiration": true,
+      "grace_period_days": 7
+    },
+    "recovery_protocol": {
+      "on_signature_failure": "Re-fetch public key from /.well-known/issuer-key.json, if fail default to offline quarantine",
+      "on_clock_skew": "Clamp local expiration window if discrepancy is less than 300 seconds"
+    }
+  }
+}
