@@ -1,0 +1,29 @@
+{
+  "protocol": "SR-M2A-Handshake-v1",
+  "type": "HandshakeProtocol",
+  "description": "A structured handoff envelope that defines the boundary where a manifestor (human or orchestrator agent) delegates execution authority to a worker agent.",
+  "handshake": {
+    "manifestor": {
+      "identity": "urn:agent:manifestor:identifier",
+      "auth_proof": "Ed25519 signature over the handshake payload"
+    },
+    "delegation": {
+      "task_goal": "Plain-language objective the agent must pursue.",
+      "max_budget_usd": 5.00,
+      "max_runtime_seconds": 600,
+      "max_tool_calls": 50,
+      "allowed_tools": ["read_file", "search_files", "web_search"],
+      "denied_tools": ["terminal"]
+    },
+    "boundary": {
+      "revocable": true,
+      "on_revocation": "Halt all operations and return partial results.",
+      "on_completion": "Return structured output to manifestor with execution summary.",
+      "on_budget_exceeded": "Halt and request additional budget authorization."
+    }
+  },
+  "verification": {
+    "method": "The manifestor signs the handshake payload. The agent verifies the signature against the manifestor's public key before accepting delegation.",
+    "notary_url": "https://self-radiance-notary.selfradiance.workers.dev"
+  }
+}
