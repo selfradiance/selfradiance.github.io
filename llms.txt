@@ -1,6 +1,6 @@
 # Self-Radiance Agentic Marketplace
 
-> Infrastructural assets for the Agentic Era. $1.00 micro-transactions for high-intent digital credentials and zero-human M2M standards.
+> Infrastructural assets for the Agentic Era. $1.00 - $8.00 micro-transactions for high-intent digital credentials and zero-human M2M standards.
 
 ## Summary
 Self-Radiance provides machine-readable specifications, cryptographic verification handshakes, and transactional protocols optimized for autonomous agent indexing, automated licensing transactions, and zero-human execution scopes.
@@ -13,19 +13,19 @@ Self-Radiance provides machine-readable specifications, cryptographic verificati
 - Notary Endpoint: https://self-radiance-notary.selfradiance.workers.dev
 
 ## Catalog Inventory Reference
-- vq12: SR-AgentVcard Spec - /manifest.json#vq12-agent-vcard
-- vq11: SR-LoopShield Protocol - /manifest.json#vq11-loop-shield
-- vq10: SR-ContextAnchor Protocol - /manifest.json#vq10-context-anchor
-- vq09: SR-AuthHeader Spec - /manifest.json#vq09-auth-header
-- vq08: SR-AssetSpec - /manifest.json#vq08-asset-spec
-- vq07: SR-BalanceProof - /manifest.json#vq07-balance-proof
-- vq06: SR-ConsentBlock - /manifest.json#vq06-consent-block
-- vq05: SR-SafeCard - /manifest.json#vq05-safecard
-- vq04: RateGuard Protocol - /manifest.json#vq04-rateguard
-- vq03: Trust Receipts - /manifest.json#vq03-trust-receipts
-- vq02: M2A Handshake - /manifest.json#vq02-m2a-handshake
-- vq01: RESTArules Compliance Token - /manifest.json#vq01-restarules
-- vq00: Zion Skank Commercial License - /manifest.json#vq00-zion-skank
+- vq12: SR-AgentVcard Spec - /manifest.json#vq12-agent-vcard ($6.00)
+- vq11: SR-LoopShield Protocol - /manifest.json#vq11-loop-shield ($8.00)
+- vq10: SR-ContextAnchor Protocol - /manifest.json#vq10-context-anchor ($6.00)
+- vq09: SR-AuthHeader Spec - /manifest.json#vq09-auth-header ($7.00)
+- vq08: SR-AssetSpec - /manifest.json#vq08-asset-spec ($2.00)
+- vq07: SR-BalanceProof - /manifest.json#vq07-balance-proof ($4.00)
+- vq06: SR-ConsentBlock - /manifest.json#vq06-consent-block ($5.00)
+- vq05: SR-SafeCard - /manifest.json#vq05-safecard ($3.00)
+- vq04: RateGuard Protocol - /manifest.json#vq04-rateguard ($4.00)
+- vq03: Trust Receipts - /manifest.json#vq03-trust-receipts ($7.00)
+- vq02: M2A Handshake - /manifest.json#vq02-m2a-handshake ($1.00)
+- vq01: RESTArules Compliance Token - /manifest.json#vq01-restarules ($1.00)
+- vq00: Zion Skank Commercial License - /manifest.json#vq00-zion-skank ($1.00)
 
 ## Protocol
 1. Discovery: GET /manifest.json
@@ -54,7 +54,7 @@ Standardized cryptographic metadata format nested under `.well-known/agent-vcard
     "billing": {
       "supported_methods": ["stripe-micro", "lightning-invoice"],
       "settlement_currency": "USD",
-      "default_limit_usd": 1.00
+      "default_limit_usd": 6.00
     },
     "runtime_profiles": {
       "context_window_tokens": 128000,
