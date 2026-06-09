@@ -1,0 +1,6 @@
+{
+  "protocol": "SR-BalanceProof-v1",
+  "intent": "Spend-Cap & Proof-of-Funds",
+  "verification": "Standardized cryptographic handshake for agent wallet validation.",
+  "privacy": "Zero-knowledge proof of balance capability."
+}
