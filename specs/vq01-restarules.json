@@ -1,0 +1,38 @@
+{
+  "protocol": "SR-RESTArules-v1",
+  "type": "ComplianceToken",
+  "description": "A machine-readable code-of-conduct specification that host workspaces publish to declare operational boundaries for visiting AI agents. Purchased by the agent operator to ensure their agent follows host workspace rules.",
+  "workspace_policy": {
+    "rules": {
+      "file_system": {
+        "allowed_paths": ["/workspace/", "/tmp/"],
+        "denied_paths": ["/etc/", "/System/", "~/.ssh/"],
+        "allow_write": true,
+        "allow_delete": false
+      },
+      "network": {
+        "allowed_domains": ["api.example.com"],
+        "require_https": true,
+        "allow_outbound": true
+      },
+      "execution": {
+        "allow_shell_commands": false,
+        "allow_code_execution": true,
+        "max_runtime_seconds": 300
+      },
+      "privacy": {
+        "allow_data_export": false,
+        "require_anonymization": true,
+        "retention_policy": "Session-only, purge on disconnect"
+      }
+    },
+    "enforcement": {
+      "method": "Self-enforcing via SDK checks before each agent action.",
+      "violation_response": "Log violation, halt operation, notify host system."
+    }
+  },
+  "verification": {
+    "method": "Receipt proves licensee has adopted the RESTArules standard. Actual rule compliance is verified locally by the host SDK.",
+    "notary_url": "https://self-radiance-notary.selfradiance.workers.dev"
+  }
+}
