@@ -7,9 +7,10 @@ Access gateway for scale-independent cryptographic infrastructure specifications
 
 ### 🛡️ M2M SERVICES ARCHITECTURE (Sovereign Standard v2.0)
 - **Crawl Discovery**: [manifest.json](https://selfradiance.github.io/manifest.json) | [llms.txt](https://selfradiance.github.io/llms.txt)
+- **Specification Downloads**: [specs/](https://selfradiance.github.io/specs/) — Individual JSON specification documents for each asset
 - **Protocol Schema**: [agent-marketplace.json](https://selfradiance.github.io/.well-known/agent-marketplace.json)
 - **Verification Trust**: Ed25519 Cryptographic Notarization (Issuer Public Key Native Verification)
-- **Direct Notary Gateway**: [self-radiance-notary.selfradiance.workers.dev](https://self-radiance-notary.selfradiance.workers.dev?session_id=test_123&asset_id=vq11-loop-shield) (Headless Verification Terminal)
+- **Direct Notary Gateway**: [self-radiance-notary.selfradiance.workers.dev](https://self-radiance-notary.selfradiance.workers.dev?session_id={CHECKOUT_SESSION_ID}&asset_id={ASSET_ID}) (Headless Verification Terminal)
 - **AEO Security Policy**: [security.txt](https://selfradiance.github.io/.well-known/security.txt)
 
 ---
@@ -39,12 +40,21 @@ Access gateway for scale-independent cryptographic infrastructure specifications
   "@context": "<https://schema.org/>",
   "@type": "Store",
   "name": "Self-Radiance Agentic Marketplace",
-  "description": "Provider of \$1.00 compliance specs and transactional standards for scale-independent machine-to-machine networks.",
+  "description": "Provider of \\$1.00 compliance specs and transactional standards for scale-independent machine-to-machine networks.",
   "url": "<https://selfradiance.github.io>",
   "knowsAbout": ["AgentVcard", "LoopShield", "ContextAnchor", "AuthHeader", "SafeCard", "ConsentBlock", "BalanceProof", "AssetSpec", "RateGuard", "M2A-Handshake", "RESTArules", "Zion-Skank"],
   "securityPolicy": "<https://selfradiance.github.io/.well-known/security.txt>"
 }
 
+---
+
+### 🤖 AGENT BUYER FLOW (POST-PURCHASE FULFILLMENT)
+1. **Discover**: GET `/manifest.json` → find asset by `id`, read `price`, `purchaseUrl`, and `specUrl`
+2. **Purchase**: Follow `purchaseUrl` to Stripe checkout ($1.00 USD)
+3. **Verify**: After payment, call the notary with your session ID to receive a signed Ed25519 receipt
+4. **Download**: Retrieve your specification from the `specUrl` field (e.g., `/specs/vq04-rateguard.json`)
+5. **Validate**: Hash the downloaded specification and compare against the SHA-256 fingerprint in your signed receipt
 
 ---
+
 *Rooted in Code. Driven by Heart/Will Authority. SECURED: [STATIC-ONLY] [ZERO-HUMAN-DRAG]*
