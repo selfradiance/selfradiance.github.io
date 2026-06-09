@@ -1,0 +1,7 @@
+{
+  "auth": {
+    "type": "SR-AuthHeader-v1.7",
+    "required_headers": ["X-Agent-Signature", "X-Agent-Payload"],
+    "verification_endpoint": "https://self-radiance-notary.selfradiance.workers.dev"
+  }
+}
