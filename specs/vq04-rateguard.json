@@ -1,0 +1,34 @@
+{
+  "protocol": "SR-RateGuard-v1",
+  "type": "RiskMitigationPolicy",
+  "description": "A configurable rate-limiting and spend-cap enforcement layer for autonomous AI agents. Prevents runaway API costs by establishing hard thresholds on call frequency, concurrency, and total spend. Supports two deployment models: SDK (library imported by the agent) and Proxy (sidecar process the agent routes through â€” recommended for production).",
+  "configuration": {
+    "thresholds": {
+      "max_calls_per_minute": 60,
+      "max_calls_per_hour": 1000,
+      "max_concurrent_calls": 5,
+      "max_spend_per_session_usd": 10.00,
+      "max_spend_per_day_usd": 50.00
+    },
+    "actions": {
+      "on_rate_limit": "Reject call and return 429 status with retry-after header.",
+      "on_budget_exceeded": "Halt all outbound API calls and notify operator.",
+      "grace_window_seconds": 30
+    },
+    "monitoring": {
+      "log_all_calls": true,
+      "expose_metrics_endpoint": true,
+      "alert_on_threshold_warning": "80% of any limit"
+    }
+  },
+  "integration": {
+    "supported_providers": ["OpenAI", "Anthropic", "Google AI", "OpenRouter", "Any HTTP API"],
+    "deployment_options": {
+      "sdk": "Library imported directly by the agent runtime. Easier to adopt but can be bypassed by buggy agent code.",
+      "proxy": "Sidecar process or reverse proxy that all agent API calls must route through. Cannot be bypassed. Recommended for production deployments where spend guarantees are required."
+    }
+  },
+  "verification": {
+    "notary_url": "https://self-radiance-notary.selfradiance.workers.dev"
+  }
+}
