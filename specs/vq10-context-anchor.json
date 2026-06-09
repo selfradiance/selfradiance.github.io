@@ -1,0 +1,8 @@
+{
+  "state_management": {
+    "type": "SR-ContextAnchor-v1.7",
+    "hash_type": "SHA-256",
+    "anchor_headers": ["X-Context-Anchor-Hash", "X-Anchor-Timestamp"],
+    "verification_endpoint": "https://self-radiance-notary.selfradiance.workers.dev"
+  }
+}
