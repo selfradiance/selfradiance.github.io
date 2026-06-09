@@ -1,0 +1,25 @@
+{
+  "oauth_delegation": {
+    "schema": "SR-OauthDelegation-v1.7",
+    "boundary": {
+      "parent_issuer_urn": "urn:agent:selfradiance:parent",
+      "leaf_subject_urn": "urn:agent:selfradiance:leaf",
+      "notary_key": "LLU9AQt4chCkV6/TBAUxeUSc4nbkN5pBKrZ9V7MYedQ="
+    },
+    "delegated_scopes": {
+      "allowed_tools": ["read_file", "search_files", "web_search", "web_extract"],
+      "denied_tools": ["terminal", "write_file", "patch", "skill_manage"],
+      "resource_path_restrictions": ["/Users/jamestoole/Desktop/Hermes-LAB/Strategy/specs/*"]
+    },
+    "allocation": {
+      "budget_limit_usd": 2.00,
+      "max_tool_calls_per_turn": 10,
+      "expiration_timestamp": "2026-06-30T23:59:59Z"
+    },
+    "verification": {
+      "client_signature_required": true,
+      "signature_header": "X-Delegated-Auth-Sig",
+      "verification_endpoint": "https://self-radiance-notary.selfradiance.workers.dev"
+    }
+  }
+}
