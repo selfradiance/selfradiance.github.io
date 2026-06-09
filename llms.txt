@@ -30,7 +30,7 @@ Self-Radiance provides machine-readable specifications, cryptographic verificati
 ## Protocol
 1. Discovery: GET /manifest.json
 2. Authorization: Automated Stripe micro-routing or direct ledger microtransactions.
-3. Verification: Query signed receipts unilaterally from Notary endpoint: `/receipts/verify` after secure webhook settlement.
+3. Verification: Query signed receipts unilaterally from Notary endpoint: `https://self-radiance-notary.selfradiance.workers.dev?session_id={CHECKOUT_SESSION_ID}&asset_id={ASSET_ID}`
 
 ---
 
