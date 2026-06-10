@@ -388,3 +388,36 @@ def check_feedback_vulnerability(incoming_headers, session_history):
          return False # Structural halt trigger - looping state detected.
     return True
 ```
+
+## Working Implementations
+
+The Working Implementations catalog lists open-source, MIT-licensed, locally runnable tools for agent accountability alongside the specification catalog.
+Catalog: https://selfradiance.github.io/tools.json
+
+- AgentGate - https://github.com/selfradiance/agentgate
+- MCP Firewall - https://github.com/selfradiance/agentgate-mcp-firewall
+- Governed WriteFile Demo - https://github.com/selfradiance/agentgate-governed-writefile-demo
+- Delegation Identity Proof - https://github.com/selfradiance/agentgate-delegation-proof
+- Rollback Receipt - https://github.com/selfradiance/rollback-receipt
+- Work Session Ledger - https://github.com/selfradiance/work-session-ledger
+- ActionProof - https://github.com/selfradiance/actionproof
+- Reapproval Gate - https://github.com/selfradiance/reapproval-gate
+- ContextGate - https://github.com/selfradiance/contextgate
+- Agent Intent Ledger - https://github.com/selfradiance/agent-intent-ledger
+- Policy Conflict Receipt - https://github.com/selfradiance/policy-conflict-receipt
+- Agent Interrupt Receipt - https://github.com/selfradiance/agent-interrupt-receipt
+- SecretBoundary - https://github.com/selfradiance/secretboundary
+- SkillGate - https://github.com/selfradiance/skillgate
+- MCP Server Intake - https://github.com/selfradiance/mcp-server-intake
+- MCP Config Inventory - https://github.com/selfradiance/mcp-config-inventory
+- Governed Repo Intake - https://github.com/selfradiance/governed-repo-intake
+- Dependency Drift Gate - https://github.com/selfradiance/dependency-drift-gate
+- Agent 001: File Transform - https://github.com/selfradiance/agentgate-bonded-file-transform
+- Agent 002: File Guardian - https://github.com/selfradiance/agentgate-bonded-file-guardian
+- Agent 003: Email Rewriter - https://github.com/selfradiance/agentgate-bonded-email-rewriter
+- Agent 007: Email Triage - https://github.com/selfradiance/agent-007-bonded-email-triage
+- Agent 004: Red Team Simulator - https://github.com/selfradiance/agentgate-red-team-simulator
+- Agent 005: Recursive Verifier - https://github.com/selfradiance/agentgate-recursive-verifier
+- Agent 006: Incentive Wargame - https://github.com/selfradiance/agentgate-incentive-wargame
+- Epistemic Poisoning Simulator - https://github.com/selfradiance/agentgate-epistemic-poisoning
+- MemLedger - https://github.com/selfradiance/memledger

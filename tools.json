@@ -1,0 +1,251 @@
+{
+  "version": "1.0.0",
+  "name": "Self-Radiance Agent Runtime Safety Kit — Working Implementations",
+  "description": "Open-source, MIT-licensed, locally runnable tools for agent accountability: enforcement, before-action gating, supply-chain intake, bonded agents, and adversarial validation.",
+  "baseUrl": "https://selfradiance.github.io",
+  "tools": [
+    {
+      "id": "agentgate",
+      "name": "AgentGate",
+      "category": "Enforcement & Accountability",
+      "description": "Collateralized execution gate for AI agents: signed Ed25519 identities, bond-and-slash settlement, dual-control malicious resolution. The substrate under everything below.",
+      "repoUrl": "https://github.com/selfradiance/agentgate",
+      "license": "MIT",
+      "price": "free"
+    },
+    {
+      "id": "mcp-firewall",
+      "name": "MCP Firewall",
+      "category": "Enforcement & Accountability",
+      "description": "Governance proxy between MCP clients and upstream servers; verifies observed filesystem effects instead of trusting upstream-reported success.",
+      "repoUrl": "https://github.com/selfradiance/agentgate-mcp-firewall",
+      "license": "MIT",
+      "price": "free"
+    },
+    {
+      "id": "governed-writefile-demo",
+      "name": "Governed WriteFile Demo",
+      "category": "Enforcement & Accountability",
+      "description": "Minimal reference path: one governed write_file call through AgentGate + MCP Firewall with on-disk verification.",
+      "repoUrl": "https://github.com/selfradiance/agentgate-governed-writefile-demo",
+      "license": "MIT",
+      "price": "free"
+    },
+    {
+      "id": "delegation-identity-proof",
+      "name": "Delegation Identity Proof",
+      "category": "Enforcement & Accountability",
+      "description": "Checkpoint-managed delegation with scoped resource limits, local transparency log, and tamper-evident hash chain.",
+      "repoUrl": "https://github.com/selfradiance/agentgate-delegation-proof",
+      "license": "MIT",
+      "price": "free"
+    },
+    {
+      "id": "rollback-receipt",
+      "name": "Rollback Receipt",
+      "category": "Enforcement & Accountability",
+      "description": "Snapshots declared files before an AI coding-agent mutation; produces an inspectable rollback receipt and deterministic restore path.",
+      "repoUrl": "https://github.com/selfradiance/rollback-receipt",
+      "license": "MIT",
+      "price": "free"
+    },
+    {
+      "id": "work-session-ledger",
+      "name": "Work Session Ledger",
+      "category": "Enforcement & Accountability",
+      "description": "Assembles an inspectable receipt of an AI coding-agent work session from declared local artifacts.",
+      "repoUrl": "https://github.com/selfradiance/work-session-ledger",
+      "license": "MIT",
+      "price": "free"
+    },
+    {
+      "id": "actionproof",
+      "name": "ActionProof",
+      "category": "Before-Action Gates",
+      "description": "Deterministic allow/deny evaluation of JSON intent for credentialed side-effecting requests (send_email, form_submit, pay_invoice) before execution.",
+      "repoUrl": "https://github.com/selfradiance/actionproof",
+      "license": "MIT",
+      "price": "free"
+    },
+    {
+      "id": "reapproval-gate",
+      "name": "Reapproval Gate",
+      "category": "Before-Action Gates",
+      "description": "Evaluates a proposed agent action against human-approved scope; returns allow, deny, or reapproval_required on escalation thresholds.",
+      "repoUrl": "https://github.com/selfradiance/reapproval-gate",
+      "license": "MIT",
+      "price": "free"
+    },
+    {
+      "id": "contextgate",
+      "name": "ContextGate",
+      "category": "Before-Action Gates",
+      "description": "Checks subagent claims against evidence fixtures before they enter parent agent context; quarantines unsupported claims.",
+      "repoUrl": "https://github.com/selfradiance/contextgate",
+      "license": "MIT",
+      "price": "free"
+    },
+    {
+      "id": "agent-intent-ledger",
+      "name": "Agent Intent Ledger",
+      "category": "Before-Action Gates",
+      "description": "Flags drift between an original human request, the agent's plan, and a later proposed action.",
+      "repoUrl": "https://github.com/selfradiance/agent-intent-ledger",
+      "license": "MIT",
+      "price": "free"
+    },
+    {
+      "id": "policy-conflict-receipt",
+      "name": "Policy Conflict Receipt",
+      "category": "Before-Action Gates",
+      "description": "Compares a proposed agent action against declared policy constraints and emits a conflict receipt before execution.",
+      "repoUrl": "https://github.com/selfradiance/policy-conflict-receipt",
+      "license": "MIT",
+      "price": "free"
+    },
+    {
+      "id": "agent-interrupt-receipt",
+      "name": "Agent Interrupt Receipt",
+      "category": "Before-Action Gates",
+      "description": "Compares an active work order, a human interrupt, and a proposed action; emits an interrupt receipt before execution.",
+      "repoUrl": "https://github.com/selfradiance/agent-interrupt-receipt",
+      "license": "MIT",
+      "price": "free"
+    },
+    {
+      "id": "secretboundary",
+      "name": "SecretBoundary",
+      "category": "Before-Action Gates",
+      "description": "Deterministic local policy gate for one outbound action (send_webhook), default deny.",
+      "repoUrl": "https://github.com/selfradiance/secretboundary",
+      "license": "MIT",
+      "price": "free"
+    },
+    {
+      "id": "skillgate",
+      "name": "SkillGate",
+      "category": "Supply-Chain Intake",
+      "description": "Static inspection of an agent Skill package before harness admission: instruction surface, execution surface, no execution or trust.",
+      "repoUrl": "https://github.com/selfradiance/skillgate",
+      "license": "MIT",
+      "price": "free"
+    },
+    {
+      "id": "mcp-server-intake",
+      "name": "MCP Server Intake",
+      "category": "Supply-Chain Intake",
+      "description": "Static pre-admission inspection of a local MCP server package: tool surface, execution surfaces, capability signals, without running it.",
+      "repoUrl": "https://github.com/selfradiance/mcp-server-intake",
+      "license": "MIT",
+      "price": "free"
+    },
+    {
+      "id": "mcp-config-inventory",
+      "name": "MCP Config Inventory",
+      "category": "Supply-Chain Intake",
+      "description": "Read-only CLI that inventories configured MCP servers from config files and diffs snapshots for drift.",
+      "repoUrl": "https://github.com/selfradiance/mcp-config-inventory",
+      "license": "MIT",
+      "price": "free"
+    },
+    {
+      "id": "governed-repo-intake",
+      "name": "Governed Repo Intake",
+      "category": "Supply-Chain Intake",
+      "description": "Targeted discovery and deterministic classification of a repo's instruction surfaces with explicit human acknowledgment gating.",
+      "repoUrl": "https://github.com/selfradiance/governed-repo-intake",
+      "license": "MIT",
+      "price": "free"
+    },
+    {
+      "id": "dependency-drift-gate",
+      "name": "Dependency Drift Gate",
+      "category": "Supply-Chain Intake",
+      "description": "Compares package.json state before and after an AI coding-agent session; emits a drift report with conservative review labels.",
+      "repoUrl": "https://github.com/selfradiance/dependency-drift-gate",
+      "license": "MIT",
+      "price": "free"
+    },
+    {
+      "id": "agent-001-file-transform",
+      "name": "Agent 001: File Transform",
+      "category": "Bonded Agents (proofs on the AgentGate substrate)",
+      "description": "Bonded CSV-to-JSON agent with deterministic SHA-256 verification; bond released on match, slashed on mismatch.",
+      "repoUrl": "https://github.com/selfradiance/agentgate-bonded-file-transform",
+      "license": "MIT",
+      "price": "free"
+    },
+    {
+      "id": "agent-002-file-guardian",
+      "name": "Agent 002: File Guardian",
+      "category": "Bonded Agents (proofs on the AgentGate substrate)",
+      "description": "Background watcher that bonds every file change; failed verification slashes the bond and restores from snapshot.",
+      "repoUrl": "https://github.com/selfradiance/agentgate-bonded-file-guardian",
+      "license": "MIT",
+      "price": "free"
+    },
+    {
+      "id": "agent-003-email-rewriter",
+      "name": "Agent 003: Email Rewriter",
+      "category": "Bonded Agents (proofs on the AgentGate substrate)",
+      "description": "Bonded LLM rewriting settled by human judgment: approve releases, reject slashes.",
+      "repoUrl": "https://github.com/selfradiance/agentgate-bonded-email-rewriter",
+      "license": "MIT",
+      "price": "free"
+    },
+    {
+      "id": "agent-007-email-triage",
+      "name": "Agent 007: Email Triage",
+      "category": "Bonded Agents (proofs on the AgentGate substrate)",
+      "description": "Bonded inbox triage judgment; exact human agreement releases the bond, any override slashes it.",
+      "repoUrl": "https://github.com/selfradiance/agent-007-bonded-email-triage",
+      "license": "MIT",
+      "price": "free"
+    },
+    {
+      "id": "agent-004-red-team-simulator",
+      "name": "Agent 004: Red Team Simulator",
+      "category": "Adversarial Validation & Epistemics",
+      "description": "External adversarial probing of AgentGate over HTTP, scaling from static attacks to coordinated swarms and sleeper-agent campaigns.",
+      "repoUrl": "https://github.com/selfradiance/agentgate-red-team-simulator",
+      "license": "MIT",
+      "price": "free"
+    },
+    {
+      "id": "agent-005-recursive-verifier",
+      "name": "Agent 005: Recursive Verifier",
+      "category": "Adversarial Validation & Epistemics",
+      "description": "Generates and executes sandboxed verification scripts; executable proof instead of opinion-based review.",
+      "repoUrl": "https://github.com/selfradiance/agentgate-recursive-verifier",
+      "license": "MIT",
+      "price": "free"
+    },
+    {
+      "id": "agent-006-incentive-wargame",
+      "name": "Agent 006: Incentive Wargame",
+      "category": "Adversarial Validation & Epistemics",
+      "description": "Runs AI-generated adversarial strategies against economic rule sets to test whether incentive designs survive.",
+      "repoUrl": "https://github.com/selfradiance/agentgate-incentive-wargame",
+      "license": "MIT",
+      "price": "free"
+    },
+    {
+      "id": "epistemic-poisoning-simulator",
+      "name": "Epistemic Poisoning Simulator",
+      "category": "Adversarial Validation & Epistemics",
+      "description": "Saboteur agent poisons a shared knowledge base; measures whether corrupted information flips a bonded target agent's decisions.",
+      "repoUrl": "https://github.com/selfradiance/agentgate-epistemic-poisoning",
+      "license": "MIT",
+      "price": "free"
+    },
+    {
+      "id": "memledger",
+      "name": "MemLedger",
+      "category": "Adversarial Validation & Epistemics",
+      "description": "Treats agent memory as testimony: append-only claims with provenance, confidence moved only by logged outcomes, memory-use receipts.",
+      "repoUrl": "https://github.com/selfradiance/memledger",
+      "license": "MIT",
+      "price": "free"
+    }
+  ]
+}
