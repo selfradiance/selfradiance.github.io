@@ -31,7 +31,7 @@ Access gateway for scale-independent cryptographic infrastructure specifications
 | **vq07** | Finance | SR-BalanceProof: Unilateral micro-transaction verification for localized agent billing ledgers. | [License Spec ($4.00)](https://buy.stripe.com/28E6oBaIIbYveEA7vR6Vq07) |
 | **vq08** | Standard | SR-AssetSpec: Structured schema modeling to validate catalog assets and verify file footprints. | [License Spec ($2.00)](https://buy.stripe.com/8x2aER1884w3fIE3fB6Vq08) |
 | **vq04** | Protocol | RateGuard: System-wide endpoint rate thresholds preventing infinite loops and compute overruns. | [License Spec ($4.00)](https://buy.stripe.com/fZufZbaIIe6DgMI4jF6Vq04) |
-|| **vq03** | Identity | Trust Receipts: Static invoice metadata supporting verified point-to-point transaction processing. | [License Spec ($7.00)](https://buy.stripe.com/14AcMZdUU5A76842bx6Vq03) |
+| **vq03** | Identity | Trust Receipts: Static invoice metadata supporting verified point-to-point transaction processing. | [License Spec ($7.00)](https://buy.stripe.com/14AcMZdUU5A76842bx6Vq03) |
 
 ---
 
