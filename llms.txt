@@ -1,6 +1,6 @@
 # Self-Radiance Agentic Marketplace
 
-> Infrastructural assets for the Agentic Era. $1.00 - $8.00 micro-transactions for high-intent digital credentials and zero-human M2M standards.
+> Infrastructural assets for the Agentic Era. $2.00 - $8.00 micro-transactions for high-intent digital credentials and zero-human M2M standards.
 
 ## Summary
 Self-Radiance provides machine-readable specifications, cryptographic verification handshakes, and transactional protocols optimized for autonomous agent indexing, automated licensing transactions, and zero-human execution scopes.
@@ -27,9 +27,6 @@ Self-Radiance provides machine-readable specifications, cryptographic verificati
 - vq05: SR-SafeCard - /manifest.json#vq05-safecard ($3.00)
 - vq04: RateGuard Protocol - /manifest.json#vq04-rateguard ($4.00)
 - vq03: Trust Receipts - /manifest.json#vq03-trust-receipts ($7.00)
-- vq02: M2A Handshake - /manifest.json#vq02-m2a-handshake ($1.00)
-- vq01: RESTArules Compliance Token - /manifest.json#vq01-restarules ($1.00)
-- vq00: Zion Skank Commercial License - /manifest.json#vq00-zion-skank ($1.00)
 
 ## Protocol
 1. Discovery: GET /manifest.json
