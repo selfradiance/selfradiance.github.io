@@ -13,6 +13,9 @@ Self-Radiance provides machine-readable specifications, cryptographic verificati
 - Notary Endpoint: https://self-radiance-notary.selfradiance.workers.dev
 
 ## Catalog Inventory Reference
+- vq19: SR-NanopaySession Spec - /manifest.json#vq19-nanopay-session ($7.00)
+- vq18: SR-HttpMessageSignature Spec - /manifest.json#vq18-message-signature ($6.00)
+- vq17: SR-VerifiableIntent Protocol - /manifest.json#vq17-verifiable-intent ($5.00)
 - vq16: SR-NotaryProof Protocol - /manifest.json#vq16-notary-proof ($8.00)
 - vq15: SR-ScopeDiscovery Spec - /manifest.json#vq15-scope-discovery ($5.00)
 - vq14: SR-StateBridge Schema - /manifest.json#vq14-state-bridge ($6.00)
@@ -37,7 +40,109 @@ Self-Radiance provides machine-readable specifications, cryptographic verificati
 
 ## Technical Specifications (Standard Reference Implementation Blocks)
 
-### 1. SR-NotaryProof Protocol (vq16)
+### 1. SR-NanopaySession Spec (vq19)
+*Sovereign Standard v1.7 | Status: Verified Specification*
+
+Standardizes micro-credit pre-funded sessions in high-velocity HTTP 402 Payment Required handshakes. Avoids settlement processing latencies and transaction-fee overheads in high-frequency calling loops.
+
+#### Implementation Block (JSON)
+```json
+{
+  "nanopay_session": {
+    "schema": "SR-NanopaySession-v1.7",
+    "credit_session": {
+      "session_id": "nano_sess_8f3d4a22b7c9",
+      "prefunded_balance_usd": 7.00,
+      "minimum_charge_fraction": 0.001
+    },
+    "handshake": {
+      "protocol": "HTTP-402-Nanopay",
+      "provider_endpoint": "https://self-radiance-notary.selfradiance.workers.dev/pay",
+      "settlement_currency": "USD"
+    },
+    "consumption_bounds": {
+      "max_requests_per_session": 1000,
+      "max_bytes_transferred": 10485760,
+      "expiration_timestamp": "2026-06-30T23:59:59Z"
+    },
+    "cryptographic_signatures": {
+      "notary_session_sig": "X-Nanopay-Session-Sig",
+      "verification_endpoint": "https://self-radiance-notary.selfradiance.workers.dev"
+    }
+  }
+}
+```
+
+---
+
+### 2. SR-HttpMessageSignature Spec (vq18)
+*Sovereign Standard v1.7 | Status: Verified Specification*
+
+Standardizes message non-repudiation parameters conforming to RFC 9421. Establishes transport header rules to sign outgoing request payloads, blocking trace-intercept or message-replay vector bounds across multi-agent routes.
+
+#### Implementation Block (JSON)
+```json
+{
+  "message_signature": {
+    "schema": "SR-HttpMessageSignature-v1.7",
+    "header_standards": {
+      "signature_input": "sig1=(\"@method\" \"@authority\" \"@path\" \"content-type\" \"x-agent-timestamp\");keyid=\"LLU9AQt4chCkV6/TBAUxeUSc4nbkN5pBKrZ9V7MYedQ=\";alg=\"ed25519\"",
+      "signature": "sig1=:H9CklUvJmdfLk93mNdfLzPlK93mV4Nd9Dk3JvMdf8Lk...:"
+    },
+    "required_components": {
+      "headers": ["X-Agent-Timestamp", "Content-Type", "Host"],
+      "method_routing_bound": ["POST", "PUT"],
+      "replay_window_seconds": 60
+    },
+    "verification": {
+      "conformance": "RFC-9421",
+      "signature_header": "Signature",
+      "signature_input_header": "Signature-Input",
+      "verification_endpoint": "https://self-radiance-notary.selfradiance.workers.dev"
+    }
+  }
+}
+```
+
+---
+
+### 3. SR-VerifiableIntent Protocol (vq17)
+*Sovereign Standard v1.7 | Status: Verified Specification*
+
+Outlines cryptographic delegation chains utilizing Selective Disclosure JWTs (SD-JWT) to bind autonomous purchasing actions directly to time-bound, merchant-restricted human spending scopes. Prevents unauthorized sub-agent budget escalation.
+
+#### Implementation Block (JSON)
+```json
+{
+  "verifiable_intent": {
+    "schema": "SR-VerifiableIntent-v1.7",
+    "delegation_chain": {
+      "owner_urn": "urn:user:selfradiance:owner",
+      "authorized_agent_urn": "urn:agent:selfradiance:buyer",
+      "notary_key": "LLU9AQt4chCkV6/TBAUxeUSc4nbkN5pBKrZ9V7MYedQ="
+    },
+    "intent_bounds": {
+      "restricted_merchant_id": "acct_1NJ2cPFgLeS8z2U8",
+      "max_amount_limit_usd": 5.00,
+      "currency": "USD",
+      "allowed_asset_ids": ["vq13-oauth-delegation", "vq14-state-bridge", "vq15-scope-discovery"]
+    },
+    "constraints": {
+      "time_bound_expiration": "2026-06-30T23:59:59Z",
+      "nested_escalation_allowed": false,
+      "verification_method": "SD-JWT-Disclosure-Verification"
+    },
+    "cryptographic_signatures": {
+      "owner_sd_jwt_proof": "X-Verifiable-Intent-SD-JWT-Sig",
+      "verification_endpoint": "https://self-radiance-notary.selfradiance.workers.dev"
+    }
+  }
+}
+```
+
+---
+
+### 4. SR-NotaryProof Protocol (vq16)
 *Sovereign Standard v1.7 | Status: Verified Specification*
 
 Decentralized zero-knowledge offline licensing validation standards using Ed25519 public keys to eliminate runtime service dependency.

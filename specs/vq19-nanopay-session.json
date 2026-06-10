@@ -1,0 +1,24 @@
+{
+  "nanopay_session": {
+    "schema": "SR-NanopaySession-v1.7",
+    "credit_session": {
+      "session_id": "nano_sess_8f3d4a22b7c9",
+      "prefunded_balance_usd": 7.00,
+      "minimum_charge_fraction": 0.001
+    },
+    "handshake": {
+      "protocol": "HTTP-402-Nanopay",
+      "provider_endpoint": "https://self-radiance-notary.selfradiance.workers.dev/pay",
+      "settlement_currency": "USD"
+    },
+    "consumption_bounds": {
+      "max_requests_per_session": 1000,
+      "max_bytes_transferred": 10485760,
+      "expiration_timestamp": "2026-06-30T23:59:59Z"
+    },
+    "cryptographic_signatures": {
+      "notary_session_sig": "X-Nanopay-Session-Sig",
+      "verification_endpoint": "https://self-radiance-notary.selfradiance.workers.dev"
+    }
+  }
+}

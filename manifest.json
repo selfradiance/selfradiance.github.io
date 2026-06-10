@@ -1,5 +1,5 @@
 {
-  "version": "1.2.0",
+  "version": "1.3.0",
   "name": "Self-Radiance Agentic Marketplace",
   "description": "Universal cryptographic infrastructure specifications for scale-independent machine-to-machine transactions.",
   "baseUrl": "https://selfradiance.github.io",
@@ -10,6 +10,48 @@
     "notaryUrl": "https://self-radiance-notary.selfradiance.workers.dev"
   },
   "assets": [
+    {
+      "id": "vq19-nanopay-session",
+      "name": "SR-NanopaySession Spec",
+      "type": "IdentityProtocol",
+      "price": "7.00",
+      "currency": "USD",
+      "purchaseUrl": "https://buy.stripe.com/aFa7sFdUU6Eb3ZW3fB6Vq0j",
+      "specUrl": "https://selfradiance.github.io/specs/vq19-nanopay-session.json",
+      "metadata": {
+        "function": "HTTP-402 Low-Latency Nanopayments",
+        "value": "Standardizes micro-credit pre-funded sessions in high-velocity HTTP 402 Payment Required handshakes. Avoids settlement processing latencies and transaction-fee overheads.",
+        "version": "1.0.0"
+      }
+    },
+    {
+      "id": "vq18-message-signature",
+      "name": "SR-HttpMessageSignature Spec",
+      "type": "SecurityProtocol",
+      "price": "6.00",
+      "currency": "USD",
+      "purchaseUrl": "https://buy.stripe.com/dRmaERg328Mj7c8dUf6Vq0i",
+      "specUrl": "https://selfradiance.github.io/specs/vq18-message-signature.json",
+      "metadata": {
+        "function": "RFC-9421 Payload Non-Repudiation",
+        "value": "Standardizes message non-repudiation parameters conforming to RFC 9421. Establishes transport header rules to sign outgoing request payloads, blocking trace-intercept or message-replay vector bounds.",
+        "version": "1.0.0"
+      }
+    },
+    {
+      "id": "vq17-verifiable-intent",
+      "name": "SR-VerifiableIntent Protocol",
+      "type": "ComplianceProtocol",
+      "price": "5.00",
+      "currency": "USD",
+      "purchaseUrl": "https://buy.stripe.com/5kQ28lbMM1jR9kgdUf6Vq0h",
+      "specUrl": "https://selfradiance.github.io/specs/vq17-verifiable-intent.json",
+      "metadata": {
+        "function": "SD-JWT Scoped Parent-User Controls",
+        "value": "Outlines cryptographic delegation chains utilizing Selective Disclosure JWTs (SD-JWT) to bind autonomous purchasing actions directly to time-bound, merchant-restricted human spending scopes.",
+        "version": "1.0.0"
+      }
+    },
     {
       "id": "vq16-notary-proof",
       "name": "SR-NotaryProof Protocol",

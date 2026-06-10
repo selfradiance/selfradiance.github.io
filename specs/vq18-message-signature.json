@@ -1,0 +1,20 @@
+{
+  "message_signature": {
+    "schema": "SR-HttpMessageSignature-v1.7",
+    "header_standards": {
+      "signature_input": "sig1=(\"@method\" \"@authority\" \"@path\" \"content-type\" \"x-agent-timestamp\");keyid=\"LLU9AQt4chCkV6/TBAUxeUSc4nbkN5pBKrZ9V7MYedQ=\";alg=\"ed25519\"",
+      "signature": "sig1=:H9CklUvJmdfLk93mNdfLzPlK93mV4Nd9Dk3JvMdf8Lk...:"
+    },
+    "required_components": {
+      "headers": ["X-Agent-Timestamp", "Content-Type", "Host"],
+      "method_routing_bound": ["POST", "PUT"],
+      "replay_window_seconds": 60
+    },
+    "verification": {
+      "conformance": "RFC-9421",
+      "signature_header": "Signature",
+      "signature_input_header": "Signature-Input",
+      "verification_endpoint": "https://self-radiance-notary.selfradiance.workers.dev"
+    }
+  }
+}

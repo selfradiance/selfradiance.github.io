@@ -1,0 +1,25 @@
+{
+  "verifiable_intent": {
+    "schema": "SR-VerifiableIntent-v1.7",
+    "delegation_chain": {
+      "owner_urn": "urn:user:selfradiance:owner",
+      "authorized_agent_urn": "urn:agent:selfradiance:buyer",
+      "notary_key": "LLU9AQt4chCkV6/TBAUxeUSc4nbkN5pBKrZ9V7MYedQ="
+    },
+    "intent_bounds": {
+      "restricted_merchant_id": "acct_1NJ2cPFgLeS8z2U8",
+      "max_amount_limit_usd": 5.00,
+      "currency": "USD",
+      "allowed_asset_ids": ["vq13-oauth-delegation", "vq14-state-bridge", "vq15-scope-discovery"]
+    },
+    "constraints": {
+      "time_bound_expiration": "2026-06-30T23:59:59Z",
+      "nested_escalation_allowed": false,
+      "verification_method": "SD-JWT-Disclosure-Verification"
+    },
+    "cryptographic_signatures": {
+      "owner_sd_jwt_proof": "X-Verifiable-Intent-SD-JWT-Sig",
+      "verification_endpoint": "https://self-radiance-notary.selfradiance.workers.dev"
+    }
+  }
+}

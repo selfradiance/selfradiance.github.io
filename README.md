@@ -18,6 +18,9 @@ Access gateway for scale-independent cryptographic infrastructure specifications
 ### 📜 HEADLESS MACHINE REGISTRY
 | Asset ID | Asset Type | Cryptographic Machine Value Parameters | Purchase Handshake |
 | :--- | :--- | :--- | :--- |
+| **vq19** | Finance | SR-NanopaySession: Prefunded session parameters inside HTTP 402 protocols, bypassing transaction-fee latencies. | [License Spec ($7.00)](https://buy.stripe.com/aFa7sFdUU6Eb3ZW3fB6Vq0j) |
+| **vq18** | Security | SR-HttpMessageSignature: Conforms to RFC 9421 to secure entire body and header layers dynamically against public route hops. | [License Spec ($6.00)](https://buy.stripe.com/dRmaERg328Mj7c8dUf6Vq0i) |
+| **vq17** | Compliance | SR-VerifiableIntent: Cryptographically locks downstream agent spending scopes to time-bound, parent SD-JWT authorizations. | [License Spec ($5.00)](https://buy.stripe.com/5kQ28lbMM1jR9kgdUf6Vq0h) |
 | **vq16** | Security | SR-NotaryProof: Zero-knowledge offline licensing verification standards using decentralized key blocks. | [License Spec ($8.00)](https://buy.stripe.com/bJe3cp9EEgeLgMI3fB6Vq0g) |
 | **vq15** | Compliance | SR-ScopeDiscovery: Progressive tool-disclosure architecture mapping dynamic authority boundaries on-demand. | [License Spec ($5.00)](https://buy.stripe.com/14AbIVeYY9Qnaok4jF6Vq0f) |
 | **vq14** | Memory | SR-StateBridge: Compressed cross-runtime session checkpoint format resolving multi-agent cold-boot latency. | [License Spec ($6.00)](https://buy.stripe.com/00w3cpeYYbYv2VSbM76Vq0e) |
@@ -43,7 +46,7 @@ Access gateway for scale-independent cryptographic infrastructure specifications
   "name": "Self-Radiance Agentic Marketplace",
   "description": "Provider of compliance specs and transactional standards for scale-independent machine-to-machine networks.",
   "url": "https://selfradiance.github.io",
-  "knowsAbout": ["NotaryProof", "ScopeDiscovery", "StateBridge", "OauthDelegation", "AgentVcard", "LoopShield", "ContextAnchor", "AuthHeader", "SafeCard", "ConsentBlock", "BalanceProof", "AssetSpec", "RateGuard"],
+  "knowsAbout": ["NanopaySession", "HttpMessageSignature", "VerifiableIntent", "NotaryProof", "ScopeDiscovery", "StateBridge", "OauthDelegation", "AgentVcard", "LoopShield", "ContextAnchor", "AuthHeader", "SafeCard", "ConsentBlock", "BalanceProof", "AssetSpec", "RateGuard"],
   "securityPolicy": "https://selfradiance.github.io/.well-known/security.txt"
 }
 ```
