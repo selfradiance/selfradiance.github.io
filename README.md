@@ -1,18 +1,22 @@
-# Self-Radiance Agent Trust & Safety Kit
-> **STATUS:** Production Ready Technical Specifications | **OBJECTIVE:** Prevent runaway loops, secure credentials, manage dynamic spending scopes.
+# Self-Radiance Agent Runtime Safety Kit
 
-A lightweight registry of static, machine-readable cryptographic specifications, payload standards, and transaction receipts optimized for builders deploying autonomous agent networks, Model Context Protocol (MCP) servers, and automated payment gateways.
+> Static, machine-readable safety primitives for developers building tool-calling agents, MCP servers, autonomous workflows, and agent payment flows.
+
+Self-Radiance helps agent developers handle the runtime failure modes that appear when AI systems can call tools, spend API credits, authenticate to services, delegate work to subagents, and produce auditable actions.
+
+This kit is not a SaaS dashboard and not a rebuild. It is a curated developer-facing layer over the existing Self-Radiance agentic marketplace: the marketplace remains the machine-readable catalog, fulfillment, and receipt-verification substrate behind the kit.
 
 ---
 
-### 🛡️ CANONICAL COLD-START SOLUTIONS (Core Use Cases)
+### 🛡️ CORE RUNTIME SAFETY PROBLEMS
 
-| Developer Bottleneck | Primitives Involved | Return on Investment (ROI) |
+| Developer Problem | Primitives Involved | Why It Matters |
 | :--- | :--- | :--- |
-| **Runaway Loop Spending** | `vq11-loop-shield`, `vq04-rateguard` | Blocks recursive semantic feedback cycles before they consume multi-hundred dollar API limits. |
-| **Exposure of Long-Lived Key Credentials** | `vq09-auth-header`, `vq18-message-signature` | Implements point-to-point asymmetric challenge-response to authorize agents securely. |
-| **Unbounded Delegated Buying Power** | `vq17-verifiable-intent`, `vq13-oauth-delegation` | Binds subagent operations to explicit spending thresholds and time-restricted parent tokens (SD-JWT). |
-| **Untracked Machine Invoices & Audits** | `vq03-trust-receipts`, `vq06-consent-block` | Creates verifiable Ed25519-signed session receipts for transparent logging. |
+| **Runaway Agent Loops & API Spend** | `vq11-loop-shield`, `vq04-rateguard` | Stops recursive tool calls, prompt loops, and runaway API usage before they burn budget. |
+| **MCP / Server Authentication** | `vq09-auth-header`, `vq18-message-signature` | Authenticates agent-to-server calls without relying on exposed long-lived bearer keys. |
+| **Agent Identity** | `vq12-agent-vcard` | Gives visiting agents a machine-readable operator, scope, and resource profile. |
+| **Delegation Boundaries** | `vq13-oauth-delegation`, `vq17-verifiable-intent` | Binds subagents to scoped tools, spending limits, expiration windows, and parent intent. |
+| **Receipts / Action Verification** | `vq03-trust-receipts` | Creates verifiable records for autonomous purchases, tool calls, and agent actions. |
 
 ---
 
