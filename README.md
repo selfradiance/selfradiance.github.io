@@ -20,31 +20,52 @@ This kit is not a SaaS dashboard and not a rebuild. It is a curated developer-fa
 
 ---
 
-### 📜 MASTER INDEX (Trust & Safety Catalog)
-- **Direct Catalog Schema**: [manifest.json](https://selfradiance.github.io/manifest.json)
-- **Specification Directory**: [specs/](https://github.com/selfradiance/selfradiance.github.io/tree/main/specs) — Individual JSON layout definitions for physical import
-- **Discovery Endpoint Feed**: [llms.txt](https://selfradiance.github.io/llms.txt)
+### 📜 MASTER INDEX
 
-| Primitive ID | Utility Category | Function & Capability Mapping | Specification Price |
-| :--- | :--- | :--- | :---: |
-| **vq11** | Spend Mitigation | **SR-LoopShield:** Stops recursive dialogue deadlock and cost spirals. | $8.00 |
-| **vq04** | Spend Mitigation | **RateGuard:** Establish real-time adaptive API threshold parameters. | $4.00 |
-| **vq09** | Security | **SR-AuthHeader:** Point-to-point signature authorization avoiding credentials leak. | $7.00 |
-| **vq18** | Security | **SR-HttpMessageSignature:** Conforms to RFC 9421 dynamically securing body headers. | $6.00 |
-| **vq17** | Compliance | **SR-VerifiableIntent:** Locks subagent spending scopes using parent SD-JWT blocks. | $5.00 |
-| **vq13** | Compliance | **SR-OauthDelegation:** Signs parent-to-leaf secure tool and path boundaries. | $7.00 |
-| **vq12** | Identity | **SR-AgentVcard:** Standard metadata card detailing operator, resource limitations, and billing. | $6.00 |
-| **vq16** | Verification | **SR-NotaryProof:** Zero-knowledge offline license validation formats. | $8.00 |
-| **vq03** | Verification | **Trust Receipts:** Standardized Ed25519 receipt layout for autonomous microtransactions. | $7.00 |
-| **vq19** | Finance | **SR-NanopaySession:** Pre-funded low-latency sessions bypassing standard network fees. | $7.00 |
+- **Direct Catalog Schema**: [manifest.json](https://selfradiance.github.io/manifest.json)
+- **Specification Directory**: [specs/](https://github.com/selfradiance/selfradiance.github.io/tree/main/specs) — individual JSON layout definitions for direct inspection and import
+- **Discovery Endpoint Feed**: [llms.txt](https://selfradiance.github.io/llms.txt)
+- **Issuer Verification Key**: [issuer-key.json](https://selfradiance.github.io/.well-known/issuer-key.json)
+- **Receipt Notary Endpoint**: [self-radiance-notary.selfradiance.workers.dev](https://self-radiance-notary.selfradiance.workers.dev)
+
+| Primitive ID | Utility Category | Function & Capability Mapping | Spec | Purchase |
+| :--- | :--- | :--- | :---: | :---: |
+| **vq11** | Spend Mitigation | **SR-LoopShield:** Stops recursive dialogue deadlock and cost spirals. | [Spec](https://selfradiance.github.io/specs/vq11-loop-shield.json) | [$8.00](https://buy.stripe.com/fZu28l6ss1jR0NKeYj6Vq0b) |
+| **vq04** | Spend Mitigation | **RateGuard:** Establishes real-time adaptive API threshold parameters. | [Spec](https://selfradiance.github.io/specs/vq04-rateguard.json) | [$4.00](https://buy.stripe.com/fZufZbaIIe6DgMI4jF6Vq04) |
+| **vq09** | Security | **SR-AuthHeader:** Point-to-point signature authorization for agent-to-server calls without credential leakage. | [Spec](https://selfradiance.github.io/specs/vq09-auth-header.json) | [$7.00](https://buy.stripe.com/7sY4gt5ooe6Daok6rN6Vq09) |
+| **vq18** | Security | **SR-HttpMessageSignature:** RFC 9421-style request signing for body and header integrity. | [Spec](https://selfradiance.github.io/specs/vq18-message-signature.json) | [$6.00](https://buy.stripe.com/dRmaERg328Mj7c8dUf6Vq0i) |
+| **vq17** | Compliance | **SR-VerifiableIntent:** Locks subagent spending scopes using parent-authorized intent boundaries. | [Spec](https://selfradiance.github.io/specs/vq17-verifiable-intent.json) | [$5.00](https://buy.stripe.com/5kQ28lbMM1jR9kgdUf6Vq0h) |
+| **vq13** | Compliance | **SR-OauthDelegation:** Signs parent-to-leaf secure tool, scope, and path boundaries. | [Spec](https://selfradiance.github.io/specs/vq13-oauth-delegation.json) | [$7.00](https://buy.stripe.com/fZu5kxbMM0fNdAw5nJ6Vq0d) |
+| **vq12** | Identity | **SR-AgentVcard:** Machine-readable agent identity, operator, resource limitation, and billing metadata. | [Spec](https://selfradiance.github.io/specs/vq12-agent-vcard.json) | [$6.00](https://buy.stripe.com/5kQ28ldUU3rZ2VS7vR6Vq0c) |
+| **vq16** | Verification | **SR-NotaryProof:** Offline Ed25519 license and receipt verification format. | [Spec](https://selfradiance.github.io/specs/vq16-notary-proof.json) | [$8.00](https://buy.stripe.com/bJe3cp9EEgeLgMI3fB6Vq0g) |
+| **vq03** | Verification | **Trust Receipts:** Standardized Ed25519 receipt layout for autonomous microtransactions and auditable actions. | [Spec](https://selfradiance.github.io/specs/vq03-trust-receipts.json) | [$7.00](https://buy.stripe.com/14AcMZdUU5A76842bx6Vq03) |
+| **vq19** | Finance | **SR-NanopaySession:** Pre-funded low-latency payment sessions for high-frequency agent calls. | [Spec](https://selfradiance.github.io/specs/vq19-nanopay-session.json) | [$7.00](https://buy.stripe.com/aFa7sFdUU6Eb3ZW3fB6Vq0j) |
 
 ---
 
-### 🤖 IMPLEMENTATION ROADMAP (AEO Integration)
-1. **Fetch Capabilities**: GET `https://selfradiance.github.io/manifest.json` → locate desired specification.
-2. **Retrieve Schema**: Download standard layout natively from `/specs/{primitive_id-name}.json`. 
-3. **Verify Provenance**: Query your signed, non-repudiation cryptographic verification receipts dynamically at:
+### 🤖 IMPLEMENTATION ROADMAP
+
+1. **Discover Capabilities**
+   GET `https://selfradiance.github.io/manifest.json` to locate the desired primitive, `specUrl`, price, and purchase URL.
+
+2. **Inspect the Specification**
+   Open the linked JSON specification directly from `/specs/{primitive_id-name}.json`.
+
+3. **Purchase / License the Primitive**
+   Use the linked Stripe checkout URL or the `purchaseUrl` field in `manifest.json`.
+
+4. **Verify Provenance**
+   Query the signed receipt notary after checkout:
+
    `https://self-radiance-notary.selfradiance.workers.dev?session_id={CHECKOUT_SESSION_ID}&asset_id={ASSET_ID}`
-4. **Enforce Trust:** Load the DNS-secured master signature validation key from `https://selfradiance.github.io/.well-known/issuer-key.json` to verify digital receipts natively.
+
+5. **Enforce Trust Locally**
+   Load the DNS-secured public verification key from:
+
+   `https://selfradiance.github.io/.well-known/issuer-key.json`
+
+   Then verify the signed receipt against the downloaded specification.
+
+---
 
 *Rooted in cryptographic precision. Engineered to protect computational environments.*
