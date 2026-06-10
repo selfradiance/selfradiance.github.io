@@ -20,8 +20,7 @@ This kit is not a SaaS dashboard and not a rebuild. It is a curated developer-fa
 
 ---
 
-### 📜 MASTER INDEX
-
+### 📜 MASTER INDEX (Runtime Safety Catalog)
 - **Direct Catalog Schema**: [manifest.json](https://selfradiance.github.io/manifest.json)
 - **Specification Directory**: [specs/](https://github.com/selfradiance/selfradiance.github.io/tree/main/specs) — individual JSON layout definitions for direct inspection and import
 - **Discovery Endpoint Feed**: [llms.txt](https://selfradiance.github.io/llms.txt)

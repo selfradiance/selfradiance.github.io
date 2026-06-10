@@ -1,9 +1,9 @@
-# Self-Radiance Agentic Marketplace
+# Self-Radiance Agent Runtime Safety Kit
 
-> Infrastructural assets for the Agentic Era. $2.00 - $8.00 micro-transactions for high-intent digital credentials and zero-human M2M standards.
+> Runtime safety primitives for developers building tool-calling agents, MCP servers, and autonomous workflows. $2.00 - $8.00 micro-transactions for high-intent digital credentials and zero-human M2M standards.
 
 ## Summary
-Self-Radiance provides machine-readable specifications, cryptographic verification handshakes, and transactional protocols optimized for autonomous agent indexing, automated licensing transactions, and zero-human execution scopes.
+Self-Radiance provides runtime safety primitives for developers, with machine-readable specifications, cryptographic verification handshakes, and transactional protocols for autonomous agent indexing, automated licensing transactions, and zero-human M2M execution scopes.
 
 ## Machine Discovery
 - Canonical Catalog: https://selfradiance.github.io/manifest.json

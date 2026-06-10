@@ -1,7 +1,7 @@
 {
   "version": "1.3.0",
-  "name": "Self-Radiance Agentic Marketplace",
-  "description": "Universal cryptographic infrastructure specifications for scale-independent machine-to-machine transactions.",
+  "name": "Self-Radiance Agent Runtime Safety Kit",
+  "description": "Static, machine-readable runtime safety primitives for tool-calling agents, MCP servers, and autonomous workflows, with cryptographic receipt verification.",
   "baseUrl": "https://selfradiance.github.io",
   "verification": {
     "method": "Ed25519",
