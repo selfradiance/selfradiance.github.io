@@ -141,7 +141,7 @@
         .card { background: #12141c; border: 1px solid #1f2833; border-radius: 12px; padding: 24px; transition: transform 0.2s ease; display: flex; flex-direction: column; justify-content: space-between; }
         .card:hover { transform: translateY(-2px); border-color: #45f3ff; }
         .card h2 { margin-top: 0; font-size: 1.3rem; color: #f3f4f6; font-family: monospace; }
-        .card p { color: #c5d1e0; font-size: 0.95rem; margin-bottom: 20px; flex-grow: 1; }
+        .card p { color: #c5d1e0; font-size: 0.95rem; margin-bottom: 20px; flex-grow: 1; overflow-wrap: anywhere; }
         .badge { background: #0b0c10; color: #45f3ff; padding: 4px 12px; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; display: inline-block; margin-bottom: 12px; border: 1px solid #1f2833; width: fit-content; font-family: monospace; }
         .btn { display: inline-block; background: #1f2833; color: #45f3ff; border: 1px solid #45f3ff; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; text-align: center; transition: all 0.2s; font-size: 0.9rem; font-family: monospace; }
         .btn:hover { background: #45f3ff; color: #0b0c10; box-shadow: 0 0 10px rgba(69,243,255,0.3); }
@@ -459,7 +459,7 @@
         <div class="grid">
             <div class="card">
                 <h2>x402 Paid Endpoint</h2>
-                <p>Live Cloudflare Worker selling one machine-readable artifact for $1 USDC on Base mainnet via the x402 v2 'exact' scheme. First verified zero-human machine purchase settled on-chain (tx 0x8eb11a825de048ec5e140ad3c8bd26f315db2abb8ecda24ea39fbf1ebd8cc4fd). Reference buyer in-repo, payment-gated by x402-spend-receipt.</p>
+                <p>Live Cloudflare Worker selling one machine-readable artifact for $1 USDC on Base mainnet via the x402 v2 'exact' scheme. First verified zero-human machine purchase settled on-chain (tx <a href="https://basescan.org/tx/0x8eb11a825de048ec5e140ad3c8bd26f315db2abb8ecda24ea39fbf1ebd8cc4fd" target="_blank" rel="noopener">0x8eb1…cc4fd</a>). Reference buyer in-repo, payment-gated by x402-spend-receipt.</p>
                 <a href="https://github.com/selfradiance/x402-paid-endpoint" class="btn">GitHub Repo</a>
             </div>
         </div>
