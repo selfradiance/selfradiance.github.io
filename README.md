@@ -4,6 +4,8 @@
 
 Self-Radiance helps agent developers handle the runtime failure modes that appear when AI systems can call tools, spend API credits, authenticate to services, delegate work to subagents, and produce auditable actions.
 
+It also includes machine-payable artifacts via x402 for zero-human agent commerce.
+
 This kit is not a SaaS dashboard and not a rebuild. It is a curated developer-facing layer over the existing Self-Radiance agentic marketplace: the marketplace remains the machine-readable catalog, fulfillment, and receipt-verification substrate behind the kit.
 
 ---
@@ -39,6 +41,17 @@ This kit is not a SaaS dashboard and not a rebuild. It is a curated developer-fa
 | **vq16** | Verification | **SR-NotaryProof:** Offline Ed25519 license and receipt verification format. | [Spec](https://selfradiance.github.io/specs/vq16-notary-proof.json) | [$8.00](https://buy.stripe.com/bJe3cp9EEgeLgMI3fB6Vq0g) |
 | **vq03** | Verification | **Trust Receipts:** Standardized Ed25519 receipt layout for autonomous microtransactions and auditable actions. | [Spec](https://selfradiance.github.io/specs/vq03-trust-receipts.json) | [$7.00](https://buy.stripe.com/14AcMZdUU5A76842bx6Vq03) |
 | **vq19** | Finance | **SR-NanopaySession:** Pre-funded low-latency payment sessions for high-frequency agent calls. | [Spec](https://selfradiance.github.io/specs/vq19-nanopay-session.json) | [$7.00](https://buy.stripe.com/aFa7sFdUU6Eb3ZW3fB6Vq0j) |
+
+---
+
+### 💸 AGENT COMMERCE (x402)
+
+The first machine-payable artifact in the kit. A live Cloudflare Worker sells one machine-readable artifact for $1 USDC on Base mainnet via the x402 v2 `exact` scheme — no account, no checkout page, no human.
+
+- **Live endpoint**: [x402-paid-endpoint.selfradiance.workers.dev](https://x402-paid-endpoint.selfradiance.workers.dev)
+- **Repo (seller + reference buyer, MIT)**: [selfradiance/x402-paid-endpoint](https://github.com/selfradiance/x402-paid-endpoint)
+- **Reference buyer gate**: Payment-gated by `x402-spend-receipt`: policy check and signed receipt before any funds move.
+- **First zero-human purchase settled on-chain**: [BaseScan transaction](https://basescan.org/tx/0x8eb11a825de048ec5e140ad3c8bd26f315db2abb8ecda24ea39fbf1ebd8cc4fd)
 
 ---
 
