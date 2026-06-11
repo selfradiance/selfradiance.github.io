@@ -400,6 +400,7 @@ Catalog: https://selfradiance.github.io/tools.json
 - Delegation Identity Proof - https://github.com/selfradiance/agentgate-delegation-proof
 - Rollback Receipt - https://github.com/selfradiance/rollback-receipt
 - Work Session Ledger - https://github.com/selfradiance/work-session-ledger
+- x402 Spend Receipt - https://github.com/selfradiance/x402-spend-receipt
 - ActionProof - https://github.com/selfradiance/actionproof
 - Reapproval Gate - https://github.com/selfradiance/reapproval-gate
 - ContextGate - https://github.com/selfradiance/contextgate
