@@ -422,3 +422,4 @@ Catalog: https://selfradiance.github.io/tools.json
 - Agent 006: Incentive Wargame - https://github.com/selfradiance/agentgate-incentive-wargame
 - Epistemic Poisoning Simulator - https://github.com/selfradiance/agentgate-epistemic-poisoning
 - MemLedger - https://github.com/selfradiance/memledger
+- x402 Paid Endpoint - https://github.com/selfradiance/x402-paid-endpoint (live x402 v2 paid endpoint on Base mainnet: https://x402-paid-endpoint.selfradiance.workers.dev — $1 USDC, machine-payable, no human checkout)
