@@ -265,6 +265,16 @@
       "endpointUrl": "https://x402-paid-endpoint.selfradiance.workers.dev",
       "license": "MIT",
       "price": "$1 USDC (x402, Base mainnet)"
+    },
+    {
+      "id": "x402-license-gateway",
+      "name": "x402 License Gateway",
+      "category": "Agent Commerce (x402)",
+      "description": "Live mainnet gateway selling signed Ed25519 license receipts for all 20 catalog assets via x402 v2 exact-scheme USDC payments on Base; one fulfillment model and signing key shared with the Stripe notary rail.",
+      "repoUrl": "https://github.com/selfradiance/x402-license-gateway",
+      "endpointUrl": "https://x402-license-gateway.selfradiance.workers.dev",
+      "license": "MIT",
+      "price": "$1.00-$8.00 USDC per license (x402, Base mainnet)"
     }
   ]
 }

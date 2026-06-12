@@ -425,3 +425,4 @@ Catalog: https://selfradiance.github.io/tools.json
 - Epistemic Poisoning Simulator - https://github.com/selfradiance/agentgate-epistemic-poisoning
 - MemLedger - https://github.com/selfradiance/memledger
 - x402 Paid Endpoint - https://github.com/selfradiance/x402-paid-endpoint (live x402 v2 paid endpoint on Base mainnet: https://x402-paid-endpoint.selfradiance.workers.dev — $1 USDC, machine-payable, no human checkout)
+- x402 License Gateway - https://github.com/selfradiance/x402-license-gateway (live x402 v2 license gateway on Base mainnet: https://x402-license-gateway.selfradiance.workers.dev — all 20 catalog assets, $1.00-$8.00 USDC, machine-payable, no human checkout)
