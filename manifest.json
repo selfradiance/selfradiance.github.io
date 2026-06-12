@@ -1,5 +1,5 @@
 {
-  "version": "1.3.0",
+  "version": "1.4.0",
   "name": "Self-Radiance Agent Runtime Safety Kit",
   "description": "Static, machine-readable runtime safety primitives for tool-calling agents, MCP servers, and autonomous workflows, with cryptographic receipt verification.",
   "baseUrl": "https://selfradiance.github.io",
@@ -18,6 +18,7 @@
       "currency": "USD",
       "purchaseUrl": "https://buy.stripe.com/aFa7sFdUU6Eb3ZW3fB6Vq0j",
       "specUrl": "https://selfradiance.github.io/specs/vq19-nanopay-session.json",
+      "x402LicenseUrl": "https://x402-license-gateway.selfradiance.workers.dev/license/vq19-nanopay-session",
       "metadata": {
         "function": "HTTP-402 Low-Latency Nanopayments",
         "value": "Standardizes micro-credit pre-funded sessions in high-velocity HTTP 402 Payment Required handshakes. Avoids settlement processing latencies and transaction-fee overheads.",
@@ -32,6 +33,7 @@
       "currency": "USD",
       "purchaseUrl": "https://buy.stripe.com/dRmaERg328Mj7c8dUf6Vq0i",
       "specUrl": "https://selfradiance.github.io/specs/vq18-message-signature.json",
+      "x402LicenseUrl": "https://x402-license-gateway.selfradiance.workers.dev/license/vq18-message-signature",
       "metadata": {
         "function": "RFC-9421 Payload Non-Repudiation",
         "value": "Standardizes message non-repudiation parameters conforming to RFC 9421. Establishes transport header rules to sign outgoing request payloads, blocking trace-intercept or message-replay vector bounds.",
@@ -46,6 +48,7 @@
       "currency": "USD",
       "purchaseUrl": "https://buy.stripe.com/5kQ28lbMM1jR9kgdUf6Vq0h",
       "specUrl": "https://selfradiance.github.io/specs/vq17-verifiable-intent.json",
+      "x402LicenseUrl": "https://x402-license-gateway.selfradiance.workers.dev/license/vq17-verifiable-intent",
       "metadata": {
         "function": "SD-JWT Scoped Parent-User Controls",
         "value": "Outlines cryptographic delegation chains utilizing Selective Disclosure JWTs (SD-JWT) to bind autonomous purchasing actions directly to time-bound, merchant-restricted human spending scopes.",
@@ -60,6 +63,7 @@
       "currency": "USD",
       "purchaseUrl": "https://buy.stripe.com/bJe3cp9EEgeLgMI3fB6Vq0g",
       "specUrl": "https://selfradiance.github.io/specs/vq16-notary-proof.json",
+      "x402LicenseUrl": "https://x402-license-gateway.selfradiance.workers.dev/license/vq16-notary-proof",
       "metadata": {
         "function": "ZKP Offline License Verification",
         "value": "Decentralized offline Ed25519 verification specifications, preventing live network dependencies or single point failures.",
@@ -74,6 +78,7 @@
       "currency": "USD",
       "purchaseUrl": "https://buy.stripe.com/14AbIVeYY9Qnaok4jF6Vq0f",
       "specUrl": "https://selfradiance.github.io/specs/vq15-scope-discovery.json",
+      "x402LicenseUrl": "https://x402-license-gateway.selfradiance.workers.dev/license/vq15-scope-discovery",
       "metadata": {
         "function": "Progressive Tool Disclosure",
         "value": "Minimizes LLM context window cost by organizing tool visibility dynamically around client scope hash signatures.",
@@ -88,6 +93,7 @@
       "currency": "USD",
       "purchaseUrl": "https://buy.stripe.com/00w3cpeYYbYv2VSbM76Vq0e",
       "specUrl": "https://selfradiance.github.io/specs/vq14-state-bridge.json",
+      "x402LicenseUrl": "https://x402-license-gateway.selfradiance.workers.dev/license/vq14-state-bridge",
       "metadata": {
         "function": "Cross-Framework State Interoperability",
         "value": "Standardizes agent checkpoints, goals, and footprints, optimizing multi-agent transitions and preventing cold-starts.",
@@ -102,6 +108,7 @@
       "currency": "USD",
       "purchaseUrl": "https://buy.stripe.com/fZu5kxbMM0fNdAw5nJ6Vq0d",
       "specUrl": "https://selfradiance.github.io/specs/vq13-oauth-delegation.json",
+      "x402LicenseUrl": "https://x402-license-gateway.selfradiance.workers.dev/license/vq13-oauth-delegation",
       "metadata": {
         "function": "Secure Context Delegation",
         "value": "Cryptographically secures parent-to-leaf orchestration loops, enforcing time-bound, budget-restricted, and tool-scoped access limits.",
@@ -116,6 +123,7 @@
       "currency": "USD",
       "purchaseUrl": "https://buy.stripe.com/5kQ28ldUU3rZ2VS7vR6Vq0c",
       "specUrl": "https://selfradiance.github.io/specs/vq12-agent-vcard.json",
+      "x402LicenseUrl": "https://x402-license-gateway.selfradiance.workers.dev/license/vq12-agent-vcard",
       "metadata": {
         "function": "Visiting Agent Profiling & Discovery",
         "value": "Cryptographic business-card schema establishing operator entity, execution limits, administrative coordinates, and dynamic billing integrations.",
@@ -130,6 +138,7 @@
       "currency": "USD",
       "purchaseUrl": "https://buy.stripe.com/fZu28l6ss1jR0NKeYj6Vq0b",
       "specUrl": "https://selfradiance.github.io/specs/vq11-loop-shield.json",
+      "x402LicenseUrl": "https://x402-license-gateway.selfradiance.workers.dev/license/vq11-loop-shield",
       "metadata": {
         "function": "Loop Deadlock Mitigation",
         "value": "Stops runaway semantic cycles, feedback deadlocks, and infinite prompt cost spirals in multi-agent execution pathways.",
@@ -144,6 +153,7 @@
       "currency": "USD",
       "purchaseUrl": "https://buy.stripe.com/7sYeV7188faHbso2bx6Vq0a",
       "specUrl": "https://selfradiance.github.io/specs/vq10-context-anchor.json",
+      "x402LicenseUrl": "https://x402-license-gateway.selfradiance.workers.dev/license/vq10-context-anchor",
       "metadata": {
         "function": "Context Scaling & Recall",
         "value": "Deterministic state compression and storage anchors to mitigate context-window drift, loss-of-focus, and hallucinatory degradation.",
@@ -158,6 +168,7 @@
       "currency": "USD",
       "purchaseUrl": "https://buy.stripe.com/7sY4gt5ooe6Daok6rN6Vq09",
       "specUrl": "https://selfradiance.github.io/specs/vq09-auth-header.json",
+      "x402LicenseUrl": "https://x402-license-gateway.selfradiance.workers.dev/license/vq09-auth-header",
       "metadata": {
         "function": "A2A Authentication",
         "value": "Point-to-point cryptographic signatures verifying agent operational keys without credential exposition.",
@@ -172,6 +183,7 @@
       "currency": "USD",
       "purchaseUrl": "https://buy.stripe.com/8x2aER1884w3fIE3fB6Vq08",
       "specUrl": "https://selfradiance.github.io/specs/vq08-asset-spec.json",
+      "x402LicenseUrl": "https://x402-license-gateway.selfradiance.workers.dev/license/vq08-asset-spec",
       "metadata": {
         "function": "Structured Artifact Validation",
         "value": "Specifying precise digital asset formatting structures and validating static verification footprints.",
@@ -186,6 +198,7 @@
       "currency": "USD",
       "purchaseUrl": "https://buy.stripe.com/28E6oBaIIbYveEA7vR6Vq07",
       "specUrl": "https://selfradiance.github.io/specs/vq07-balance-proof.json",
+      "x402LicenseUrl": "https://x402-license-gateway.selfradiance.workers.dev/license/vq07-balance-proof",
       "metadata": {
         "function": "Micro-transaction Validation Ledger",
         "value": "Secures dynamic transaction balance verification on isolated ledger limits without central authority checks.",
@@ -200,6 +213,7 @@
       "currency": "USD",
       "purchaseUrl": "https://buy.stripe.com/00wfZb2cc4w3fIEg2n6Vq06",
       "specUrl": "https://selfradiance.github.io/specs/vq06-consent-block.json",
+      "x402LicenseUrl": "https://x402-license-gateway.selfradiance.workers.dev/license/vq06-consent-block",
       "metadata": {
         "function": "Immutable Consent Registry",
         "value": "Cryptographically logs user consent parameters and session boundaries during machine execution loops.",
@@ -214,6 +228,7 @@
       "currency": "USD",
       "purchaseUrl": "https://buy.stripe.com/00w00d5oo6EbeEA9DZ6Vq05",
       "specUrl": "https://selfradiance.github.io/specs/vq05-safecard.json",
+      "x402LicenseUrl": "https://x402-license-gateway.selfradiance.workers.dev/license/vq05-safecard",
       "metadata": {
         "function": "A2A Trust Gateways",
         "value": "Provides safe, scoped cryptographic credentials authorizing discrete agent handshakes across untrusted layers.",
@@ -228,6 +243,7 @@
       "currency": "USD",
       "purchaseUrl": "https://buy.stripe.com/fZufZbaIIe6DgMI4jF6Vq04",
       "specUrl": "https://selfradiance.github.io/specs/vq04-rateguard.json",
+      "x402LicenseUrl": "https://x402-license-gateway.selfradiance.workers.dev/license/vq04-rateguard",
       "metadata": {
         "function": "API Call Rate Mitigation",
         "value": "Establishes secure, adaptive operational thresholds preventing loop spikes and rate limit exhaustion.",
@@ -242,6 +258,7 @@
       "currency": "USD",
       "purchaseUrl": "https://buy.stripe.com/14AcMZdUU5A76842bx6Vq03",
       "specUrl": "https://selfradiance.github.io/specs/vq03-trust-receipts.json",
+      "x402LicenseUrl": "https://x402-license-gateway.selfradiance.workers.dev/license/vq03-trust-receipts",
       "metadata": {
         "function": "Interoperable Trust Receipts",
         "value": "Verifiable payment records enabling secure, asymmetric receipt checking on discrete transaction scopes.",
@@ -256,6 +273,7 @@
       "currency": "USD",
       "purchaseUrl": "https://buy.stripe.com/28E8wJ8AA0fNdAwdUf6Vq02",
       "specUrl": "https://selfradiance.github.io/specs/vq02-m2a-handshake.json",
+      "x402LicenseUrl": "https://x402-license-gateway.selfradiance.workers.dev/license/vq02-m2a-handshake",
       "metadata": {
         "function": "Authority Hand-off Boundary",
         "value": "Explicit interface configurations to safely transition execution authority from manifestor nodes to agents.",
@@ -270,6 +288,7 @@
       "currency": "USD",
       "purchaseUrl": "https://buy.stripe.com/14AdR3g327Ifcws7vR6Vq01",
       "specUrl": "https://selfradiance.github.io/specs/vq01-restarules.json",
+      "x402LicenseUrl": "https://x402-license-gateway.selfradiance.workers.dev/license/vq01-restarules",
       "metadata": {
         "function": "System-specific Code-of-Conduct",
         "value": "Direct policy rules SDK verifying compliance boundaries for operations targeting high-density workspaces.",
@@ -284,6 +303,7 @@
       "currency": "USD",
       "purchaseUrl": "https://buy.stripe.com/cNi5kxaII0fN7c8g2n6Vq00",
       "specUrl": "https://selfradiance.github.io/specs/vq00-zion-skank.json",
+      "x402LicenseUrl": "https://x402-license-gateway.selfradiance.workers.dev/license/vq00-zion-skank",
       "metadata": {
         "function": "Audio Intellectual Property Token",
         "value": "Stripe-backed cryptographic licensing for generative, zero-royalty Zion Skank audio integration.",

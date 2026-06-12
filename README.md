@@ -28,6 +28,7 @@ This kit is not a SaaS dashboard and not a rebuild. It is a curated developer-fa
 - **Discovery Endpoint Feed**: [llms.txt](https://selfradiance.github.io/llms.txt)
 - **Issuer Verification Key**: [issuer-key.json](https://selfradiance.github.io/.well-known/issuer-key.json)
 - **Receipt Notary Endpoint**: [self-radiance-notary.selfradiance.workers.dev](https://self-radiance-notary.selfradiance.workers.dev)
+- **x402 License Gateway (machine payment rail)**: [x402-license-gateway.selfradiance.workers.dev](https://x402-license-gateway.selfradiance.workers.dev)
 
 | Primitive ID | Utility Category | Function & Capability Mapping | Spec | Purchase |
 | :--- | :--- | :--- | :---: | :---: |
@@ -46,12 +47,14 @@ This kit is not a SaaS dashboard and not a rebuild. It is a curated developer-fa
 
 ### 💸 AGENT COMMERCE (x402)
 
-The first machine-payable artifact in the kit. A live Cloudflare Worker sells one machine-readable artifact for $1 USDC on Base mainnet via the x402 v2 `exact` scheme — no account, no checkout page, no human.
+All 20 primitives are machine-payable. A live Cloudflare Worker gateway sells a signed Ed25519 license receipt for every asset ($1.00-$8.00 USDC on Base mainnet) via the x402 v2 exact scheme — no account, no checkout page, no human. Specs stay freely downloadable; payment buys the cryptographic license receipt.
 
-- **Live endpoint**: [x402-paid-endpoint.selfradiance.workers.dev](https://x402-paid-endpoint.selfradiance.workers.dev)
-- **Repo (seller + reference buyer, MIT)**: [selfradiance/x402-paid-endpoint](https://github.com/selfradiance/x402-paid-endpoint)
+- **Gateway discovery (free JSON index of all 20 assets)**: [x402-license-gateway.selfradiance.workers.dev](https://x402-license-gateway.selfradiance.workers.dev)
+- **Per-asset payment URLs**: the `x402LicenseUrl` field in `manifest.json`
+- **Gateway repo (MIT)**: [selfradiance/x402-license-gateway](https://github.com/selfradiance/x402-license-gateway)
+- **Original single-asset proof of concept (vq00, historical)**: [x402-paid-endpoint.selfradiance.workers.dev](https://x402-paid-endpoint.selfradiance.workers.dev) — repo [selfradiance/x402-paid-endpoint](https://github.com/selfradiance/x402-paid-endpoint)
 - **Reference buyer gate**: Payment-gated by `x402-spend-receipt`: policy check and signed receipt before any funds move.
-- **First zero-human purchase settled on-chain**: [BaseScan transaction](https://basescan.org/tx/0x8eb11a825de048ec5e140ad3c8bd26f315db2abb8ecda24ea39fbf1ebd8cc4fd)
+- **First zero-human mainnet purchase of a catalog license settled on-chain**: [Base tx 0xd7312064e5b9e0f5a5469d6d19e298d8ede277cb2398edefa7d3a2833f1290d5](https://basescan.org/tx/0xd7312064e5b9e0f5a5469d6d19e298d8ede277cb2398edefa7d3a2833f1290d5)
 
 ---
 
@@ -64,7 +67,7 @@ The first machine-payable artifact in the kit. A live Cloudflare Worker sells on
    Open the linked JSON specification directly from `/specs/{primitive_id-name}.json`.
 
 3. **Purchase / License the Primitive**
-   Use the linked Stripe checkout URL or the `purchaseUrl` field in `manifest.json`.
+   Human rail: use the linked Stripe checkout URL or the `purchaseUrl` field in `manifest.json`. Machine rail: GET the asset's `x402LicenseUrl`, decode the 402 PAYMENT-REQUIRED header, pay via x402 exact scheme (USDC, eip155:8453), and retry; the response body is the signed license receipt and the settlement tx hash arrives in the PAYMENT-RESPONSE header.
 
 4. **Verify Provenance**
    Query the signed receipt notary after checkout:
